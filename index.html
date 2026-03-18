@@ -438,7 +438,7 @@
             </div>
         </div>
         <div class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-            © 2026 ALOS SERVICES. <br>
+            © 2024 ALOS SERVICES. <br>
             <button onclick="document.getElementById('legal-modal').style.display='block'" class="underline hover:text-white mt-2">Mentions Légales & Confidentialité</button>
         </div>
     </footer>
@@ -467,11 +467,9 @@
     </div>
 
     <script>
-        // ANIMATION OBSERVER
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } }); });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // TEXTE DYNAMIQUE
         const words = {
             fr: ["Canton de Berne.", "Vos Urgences.", "Vos Rénovations.", "Votre Maison."],
             de: ["Kanton Bern.", "Notfälle.", "Renovierungen.", "Ihr Zuhause."],
@@ -492,7 +490,6 @@
         }
         setInterval(rotateText, 3000);
 
-        // TRADUCTIONS
         const translations = {
             fr: {
                 nav_about: "À Propos", nav_services: "Services", nav_faq: "FAQ", nav_quote: "Devis Gratuit",
@@ -607,7 +604,7 @@
             {
                 q: { fr: "Quels sont vos tarifs ? 💰", de: "Welche Preise? 💰", en: "What are your rates? 💰" },
                 a: { 
-                    fr: "Mes tarifs sont compétitifs et abordables car je n'ai pas de frais de structure inutiles. Je propose un devis gratuit et sans engagement avant toute intervention.", 
+                    fr: "Mes tarifs sont très compétitifs et abordables car je n'ai pas de frais de structure inutiles. Je propose un devis gratuit et sans engagement avant toute intervention.", 
                     de: "Meine Preise sind wettbewerbsfähig und erschwinglich. Ich biete vor jedem Eingriff einen kostenlosen Kostenvoranschlag an.", 
                     en: "My rates are very competitive and affordable. I offer a free quote before any work." 
                 }
@@ -702,7 +699,6 @@
             }
         }
 
-        // FORMULAIRE CONTACT - FORMSUBMIT.CO
         document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
             e.preventDefault();
             const form = e.target;
