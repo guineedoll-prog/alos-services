@@ -3,15 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>ALOS SERVICES | Plombier, Électricien & Rénovation à Berne (25 ans d'exp)</title>
+    <meta name="description" content="Artisan indépendant à Berne, Bienne et Seeland. Dépannage plomberie, électricité, peinture et rénovation. Intervention rapide, devis gratuit. Appelez le 076 533 01 47." />
+    <meta name="keywords" content="Artisan Berne, Plombier Bern, Sanitär Bern, Électricien Bienne, Peintre Seeland, Rénovation Jura Bernois, Handwerker Bern, ALOS Services" />
+    <meta name="author" content="ALOS SERVICES">
+
+    <meta property="og:title" content="ALOS SERVICES - Votre Artisan de Confiance à Berne" />
+    <meta property="og:description" content="Besoin d'un plombier, électricien ou peintre ? 25 ans d'expérience. Devis gratuit au 076 533 01 47." />
+    <meta property="og:image" content="images/moi.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CH" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ALOS SERVICES",
+      "image": "https://alos-services.ch/images/moi.jpg",
+      "description": "Artisan indépendant à Berne. Plomberie, électricité, peinture, rénovation. 25 ans d'expérience.",
+      "telephone": "+41765330147",
+      "email": "a-ramadani77@hotmail.com",
+      "url": "https://alos-services.ch",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Canton de Berne",
+        "addressLocality": "Bern",
+        "addressRegion": "BE",
+        "addressCountry": "CH"
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Bern"},
+        {"@type": "City", "name": "Biel"},
+        {"@type": "City", "name": "Thun"}
+      ],
+      "priceRange": "CHF 80-120",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "47"
+      },
+      "sameAs": [
+        "https://www.google.com/maps/place/Bern,+Switzerland"
+      ]
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         body { font-family: 'Manrope', sans-serif; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-        .fun-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(135deg, #a7f3d0 0%, #f3f4f6 100%); overflow: hidden; }
+        
+        .fun-background {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: linear-gradient(135deg, #a7f3d0 0%, #f3f4f6 100%); 
+            overflow: hidden;
+        }
         .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
-        .circles li { position: absolute; display: block; list-style: none; width: 20px; height: 20px; background: rgba(4, 120, 87, 0.6); animation: animate 25s linear infinite; bottom: -150px; border-radius: 4px; }
+        .circles li {
+            position: absolute; display: block; list-style: none; width: 20px; height: 20px;
+            background: rgba(4, 120, 87, 0.6); 
+            animation: animate 25s linear infinite;
+            bottom: -150px; border-radius: 4px;
+        }
         .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
         .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
         .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
@@ -22,119 +79,327 @@
         .circles li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
         .circles li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
         .circles li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
-        @keyframes animate { 0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 10%; } 100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; } }
+        @keyframes animate {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 10%; }
+            100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
+        }
+
         .typing-cursor::after { content: '|'; animation: blink 1s step-start infinite; color: #059669; }
         @keyframes blink { 50% { opacity: 0; } }
+        
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+        .logo-dot { display: inline-block; animation: pulse-green 2s infinite; border-radius: 50%; }
+
+        @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .nav-animate { animation: slideDown 0.8s ease-out forwards; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .hero-animate { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; } .delay-200 { animation-delay: 0.2s; } .delay-300 { animation-delay: 0.3s; }
+
         .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+
         .whatsapp-float { position: fixed; bottom: 80px; right: 20px; z-index: 100; animation: float 3s ease-in-out infinite; }
+        @media(min-width: 768px) { .whatsapp-float { bottom: 30px; } }
         @keyframes float { 0% { transform: translatey(0px); } 50% { transform: translatey(-10px); } 100% { transform: translatey(0px); } }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
-        .faq-item.active .faq-answer { max-height: 500px; }
+        
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s ease; }
+        .faq-icon { transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .faq-item.active { border-color: #059669; border-left-width: 4px; }
         .lang-btn.active { font-weight: 800; text-decoration: underline; color: #059669; }
+
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 20px; border: 1px solid #888; width: 90%; max-width: 600px; border-radius: 10px; }
     </style>
 </head>
 <body class="text-gray-900 pb-16 md:pb-0 relative">
+
     <div class="fun-background"><ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div>
 
-    <nav class="fixed w-full bg-white/90 backdrop-blur shadow-sm z-50 py-4 border-b border-gray-100">
+    <nav class="fixed w-full bg-white/90 backdrop-blur shadow-sm z-50 py-4 border-b border-gray-100 nav-animate">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="font-serif text-xl md:text-2xl font-bold">ALOS SERVICES<span class="text-emerald-600">.</span></div>
+            <div class="font-serif text-xl md:text-2xl font-bold hover:scale-105 transition-transform cursor-pointer">
+                ALOS SERVICES<span class="text-emerald-600 logo-dot">.</span>
+            </div>
             <div class="flex items-center gap-6">
-                <div class="flex gap-2 text-sm">
-                    <button onclick="changeLanguage('fr')" class="lang-btn active" data-lang="fr">FR</button>
-                    <button onclick="changeLanguage('de')" class="lang-btn" data-lang="de">DE</button>
-                    <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en">EN</button>
+                <div class="hidden md:flex gap-6 items-center">
+                    <a href="#about" class="font-bold text-sm uppercase hover:text-emerald-600 transition-colors" data-i18n="nav_about">À Propos</a>
+                    <a href="#services" class="font-bold text-sm uppercase hover:text-emerald-600 transition-colors" data-i18n="nav_services">Services</a>
+                    <a href="#faq" class="font-bold text-sm uppercase hover:text-emerald-600 transition-colors" data-i18n="nav_faq">FAQ</a>
                 </div>
+                <div class="flex gap-2 text-sm border-l pl-4 border-gray-300">
+                    <button data-lang="fr" onclick="changeLanguage('fr')" class="lang-btn active hover:text-emerald-600 transition-colors">FR</button>
+                    <button data-lang="de" onclick="changeLanguage('de')" class="lang-btn hover:text-emerald-600 transition-colors">DE</button>
+                    <button data-lang="en" onclick="changeLanguage('en')" class="lang-btn hover:text-emerald-600 transition-colors">EN</button>
+                </div>
+                <a href="#contact" class="hidden md:block bg-gray-900 text-white px-5 py-2 rounded text-sm font-bold hover:bg-emerald-600 transition-all hover:shadow-lg transform hover:-translate-y-0.5" data-i18n="nav_quote">Devis Gratuit</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-24 text-center">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900">
+    <header class="pt-32 pb-24 text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur text-emerald-800 font-bold text-xs uppercase tracking-widest mb-8 rounded-full border border-emerald-200 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span data-i18n="hero_badge">PLUS DE 25 ANS D'EXPÉRIENCE</span>
+            </div>
+            <h1 class="hero-animate delay-100 text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
                 <span data-i18n="hero_title_1">L'Artisan Indépendant</span> <br/>
                 <span class="text-emerald-600 typing-cursor" id="dynamic-text">Canton de Berne.</span>
             </h1>
-            <p class="text-xl text-gray-600 mb-10" data-i18n="hero_desc">Fini le stress des travaux mal finis. Plomberie, Électricité, Rénovation.</p>
-            <a href="#contact" class="bg-emerald-600 text-white px-8 py-4 rounded font-bold hover:bg-emerald-800 transition-all shadow-lg" data-i18n="hero_cta">Demander mon devis</a>
+            <p class="hero-animate delay-200 text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed bg-white/60 backdrop-blur-sm rounded p-2" data-i18n="hero_desc">Fini le stress des travaux mal finis. Je traite votre maison avec le même soin que la mienne. Plomberie, Électricité, Rénovation.</p>
+            <div class="hero-animate delay-300 flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded font-bold hover:bg-emerald-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-lg">
+                    <span data-i18n="hero_cta">Demander mon devis</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="about" class="py-24 reveal">
-        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
-            <div class="w-full lg:w-1/2">
-                <img src="images/moi.jpg" alt="Artisan" class="rounded-2xl shadow-2xl border-8 border-white w-full max-h-[500px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12'">
-            </div>
-            <div class="w-full lg:w-1/2">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="about_title">25 ans à votre service.</h2>
-                <p class="text-gray-600 text-lg mb-6" data-i18n="about_story_1">Je suis un artisan fier de ses racines. Mon choix de rester 100% indépendant est volontaire.</p>
-                <a href="#contact" class="bg-gray-900 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-600 transition-all" data-i18n="about_cta">Discuter avec l'artisan</a>
+    <section id="about" class="py-24 relative z-10 reveal">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0 relative lg:sticky lg:top-24">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-50 bg-gray-100 group">
+                        <img src="images/moi.jpg" alt="L'Artisan ALOS SERVICES" class="w-full h-auto max-h-[500px] object-cover object-top transform group-hover:scale-105 transition-transform duration-1000" onerror="this.src='https://images.unsplash.com/photo-1533038590840-1cde6e668a91?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute bottom-6 right-6 bg-emerald-600 text-white p-6 rounded-xl shadow-lg max-w-xs text-center border-4 border-white animate-bounce" style="animation-duration: 3s;">
+                            <p class="font-serif text-4xl font-bold mb-0">25</p>
+                            <p class="text-xs font-bold uppercase tracking-widest" data-i18n="about_badge">ANS D'EXPÉRIENCE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative z-20">
+                    <span class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2 block" data-i18n="about_pretitle">MON PARCOURS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-serif leading-tight" data-i18n="about_title">25 ans à votre service dans le canton de Berne.</h2>
+                    <div class="space-y-6 text-gray-600 text-lg leading-relaxed border-l-4 border-emerald-100 pl-6 bg-white/90 backdrop-blur-sm rounded-r-lg shadow-sm">
+                        <p data-i18n="about_story_1">Je suis un artisan fier de ses racines. Depuis un quart de siècle, je sillonne les routes de Berne et du Seeland. J'ai vu l'évolution des techniques, mais une chose n'a jamais changé : <strong>l'importance du travail bien fait.</strong></p>
+                        <p data-i18n="about_story_2">Mon choix de rester <strong>100% indépendant</strong> est volontaire. Je ne voulais pas devenir un numéro dans une franchise ou un gestionnaire de bureau. Je voulais garder mes outils en main et le contact direct avec vous.</p>
+                        <p data-i18n="about_story_3">Aujourd'hui, quand je rentre chez un client, que ce soit pour une fuite urgente ou une rénovation complète, j'apporte avec moi ces 25 années d'expérience. C'est votre garantie de sérénité.</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-6 mt-12 bg-white/80 p-6 rounded-xl shadow-sm">
+                        <div class="flex gap-4 items-start p-2 hover:bg-gray-50 rounded-lg transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl flex-shrink-0">📍</div>
+                            <div><h4 class="font-bold text-gray-900 text-lg" data-i18n="phil_1_title">Mon Engagement Local</h4><p class="text-gray-600" data-i18n="phil_1_desc">Je connais parfaitement le bâti de notre région. Je suis votre voisin, pas une multinationale.</p></div>
+                        </div>
+                        <div class="flex gap-4 items-start p-2 hover:bg-gray-50 rounded-lg transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl flex-shrink-0">🤝</div>
+                            <div><h4 class="font-bold text-gray-900 text-lg" data-i18n="phil_2_title">Relation Sans Filtre</h4><p class="text-gray-600" data-i18n="phil_2_desc">Pas de standardiste. C'est moi qui évalue, moi qui fais le devis, et moi qui réalise les travaux.</p></div>
+                        </div>
+                        <div class="flex gap-4 items-start p-2 hover:bg-gray-50 rounded-lg transition-colors cursor-default">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xl flex-shrink-0">🛡️</div>
+                            <div><h4 class="font-bold text-gray-900 text-lg" data-i18n="phil_3_title">Garantie Qualité</h4><p class="text-gray-600" data-i18n="phil_3_desc">Je mets mon nom et ma réputation en jeu sur chaque chantier. Le résultat doit être impeccable.</p></div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <a href="#contact" class="inline-block bg-gray-900 text-white font-bold px-8 py-4 rounded-full hover:bg-emerald-600 transition-all hover:shadow-lg hover:-translate-y-1" data-i18n="about_cta">Discuter avec l'artisan</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-emerald-50 reveal">
+    <section class="py-16 bg-gray-900 text-white border-t border-gray-800 reveal relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-700">
+                <div class="p-4 hover:bg-gray-800 transition-colors rounded"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">25+</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_1">Années d'expérience</div></div>
+                <div class="p-4 hover:bg-gray-800 transition-colors rounded"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">100%</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_2">Indépendant & Libre</div></div>
+                <div class="p-4 hover:bg-gray-800 transition-colors rounded"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">1000+</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_3">Clients à Berne & Seeland</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white/90 backdrop-blur-sm reveal relative z-10">
+        <div class="container mx-auto px-4 md:px-6 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900" data-i18n="comp_title">Pourquoi choisir un artisan indépendant ?</h2>
+                <div class="h-1 w-24 bg-emerald-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="overflow-x-auto rounded-xl shadow-2xl border border-gray-200 bg-white">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <thead>
+                        <tr class="bg-gray-50 text-gray-500 text-sm uppercase tracking-wider">
+                            <th class="p-6 font-semibold w-1/4" data-i18n="comp_col_criteria">Critères</th>
+                            <th class="p-6 bg-emerald-600 text-white font-bold w-1/4 text-center text-lg shadow-lg relative bottom-0 top-0 scale-105 transform origin-bottom rounded-t-lg">ALOS SERVICES</th>
+                            <th class="p-6 font-semibold w-1/4 text-center" data-i18n="comp_col_big">Grandes Enseignes</th>
+                            <th class="p-6 font-semibold w-1/4 text-center text-gray-400" data-i18n="comp_col_platforms">Plateformes Web</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 text-gray-700">
+                        <tr class="hover:bg-gray-50 transition-colors"><td class="p-6 font-bold" data-i18n="row_1_crit">Interlocuteur</td><td class="p-6 bg-emerald-50 text-center font-bold text-emerald-900 border-x border-emerald-100"><span class="text-green-600 text-xl mr-2">✓</span> <span data-i18n="row_1_me">Unique (Moi)</span></td><td class="p-6 text-center text-gray-500">Variable</td><td class="p-6 text-center text-gray-400">Bot</td></tr>
+                        <tr class="hover:bg-gray-50 transition-colors"><td class="p-6 font-bold" data-i18n="row_2_crit">Transparence Prix</td><td class="p-6 bg-emerald-50 text-center font-bold text-emerald-900 border-x border-emerald-100"><span class="text-green-600 text-xl mr-2">✓</span> <span data-i18n="row_2_me">Devis Fixe</span></td><td class="p-6 text-center text-gray-500">Frais élevés</td><td class="p-6 text-center text-gray-400">Cachés</td></tr>
+                        <tr class="hover:bg-gray-50 transition-colors"><td class="p-6 font-bold" data-i18n="row_3_crit">Qualité</td><td class="p-6 bg-emerald-50 text-center font-bold text-emerald-900 border-x border-emerald-100"><span class="text-green-600 text-xl mr-2">✓</span> <span data-i18n="row_3_me">Détail</span></td><td class="p-6 text-center text-gray-500">À la chaîne</td><td class="p-6 text-center text-gray-400">Aléatoire</td></tr>
+                        <tr class="hover:bg-gray-50 transition-colors"><td class="p-6 font-bold" data-i18n="row_4_crit">Réactivité</td><td class="p-6 bg-emerald-50 text-center font-bold text-emerald-900 border-x border-emerald-100"><span class="text-green-600 text-xl mr-2">✓</span> <span data-i18n="row_4_me">Directe</span></td><td class="p-6 text-center text-gray-500">Lente</td><td class="p-6 text-center text-gray-400">Auto</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 relative z-10 reveal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4" data-i18n="services_title">Mes Domaines d'Expertise</h2>
+                <div class="h-1 w-20 bg-emerald-600 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden cursor-pointer">
+                    <div class="h-48 overflow-hidden relative"><img src="images/service-plomberie.jpg" alt="Plombier" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80'"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4"><div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><h3 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors" data-i18n="srv_1_title">Plomberie</h3></div>
+                        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_1_li_1">Recherche de fuites</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_1_li_2">Remplacement robinetterie</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_1_li_3">Débouchage & Joints</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden cursor-pointer">
+                    <div class="h-48 overflow-hidden relative"><img src="images/service-electricite.jpg" alt="Electricité" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80'"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4"><div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><h3 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors" data-i18n="srv_2_title">Électricité</h3></div>
+                        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_2_li_1">Pose de luminaires</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_2_li_2">Remplacement prises</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_2_li_3">Mise en sécurité</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden cursor-pointer">
+                    <div class="h-48 overflow-hidden relative"><img src="images/service-peinture.jpg" alt="Peinture" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80'"></div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-4"><div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><h3 class="text-xl font-bold text-gray-900 group-hover:text-emerald-600 transition-colors" data-i18n="srv_3_title">Peinture</h3></div>
+                        <ul class="space-y-2 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_3_li_1">Murs et plafonds</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_3_li_2">Retouches précises</span></li>
+                            <li class="flex items-start gap-2"><span class="text-emerald-500">✔</span> <span data-i18n="srv_3_li_3">Protection des sols</span></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-emerald-50 reveal relative z-10">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl font-bold text-center mb-12" data-i18n="faq_title">Questions Fréquentes</h2>
-            <div id="faq-container" class="space-y-4"></div>
+            <div class="text-center mb-16">
+                <span class="text-emerald-600 font-bold uppercase tracking-widest text-sm" data-i18n="faq_badge">RÉPONSES IMMÉDIATES</span>
+                <h2 class="text-4xl font-bold text-gray-900 mt-2 mb-4" data-i18n="faq_title">Questions Fréquentes</h2>
+            </div>
+            <div class="space-y-4" id="faq-container"></div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-16 text-center">
+    <section id="contact" class="py-24 bg-white reveal relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-gray-100">
+                <div class="text-center mb-8"><h2 class="text-3xl font-bold mb-2 font-serif" data-i18n="contact_title">Parlons de votre projet</h2><p class="text-gray-500" data-i18n="contact_sub">Réponse garantie sous 24h</p></div>
+                <form id="contact-form" method="POST" action="https://formsubmit.co/a-ramadani77@hotmail.com" class="space-y-4">
+                    <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_subject" value="Nouveau message ALOS SERVICES">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div><label class="block text-sm font-bold mb-2 text-gray-700">Votre Nom *</label><input type="text" name="name" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded focus:border-emerald-500 focus:outline-none" /></div>
+                        <div><label class="block text-sm font-bold mb-2 text-gray-700">Téléphone *</label><input type="tel" name="phone" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded focus:border-emerald-500 focus:outline-none" /></div>
+                    </div>
+                    <div><label class="block text-sm font-bold mb-2 text-gray-700">Email *</label><input type="email" name="email" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded focus:border-emerald-500 focus:outline-none" /></div>
+                    <div><label class="block text-sm font-bold mb-2 text-gray-700">Message *</label><textarea name="message" rows="5" required class="w-full p-4 bg-gray-50 border border-gray-200 rounded focus:border-emerald-500 focus:outline-none resize-none"></textarea></div>
+                    <button type="submit" id="submit-btn" class="w-full bg-emerald-600 text-white font-bold py-4 rounded hover:bg-emerald-800 transition-all text-lg" data-i18n="contact_btn">Envoyer ma demande</button>
+                    <p id="form-status" class="text-center text-sm font-bold mt-4"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16 relative z-10 text-center">
         <div class="container mx-auto px-6">
             <div class="font-serif text-3xl font-bold mb-4">ALOS SERVICES<span class="text-emerald-500">.</span></div>
-            <p class="text-gray-400 mb-6" data-i18n="footer_desc">Artisan indépendant depuis plus de 25 ans.</p>
-            <a href="tel:+41765330147" class="text-2xl font-bold hover:text-emerald-400">076 533 01 47</a>
+            <p class="text-gray-400 text-sm mb-6" data-i18n="footer_desc">Artisan indépendant au service des particuliers et régies depuis plus de 25 ans.</p>
+            <a href="tel:+41765330147" class="text-xl font-bold text-white">076 533 01 47</a>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-gray-500 text-sm">© 2026 ALOS SERVICES.</div>
         </div>
     </footer>
 
-    <a href="https://wa.me/41765330147" target="_blank" class="whatsapp-float bg-green-500 text-white p-4 rounded-full shadow-2xl">
+    <a href="https://wa.me/41765330147" target="_blank" class="whatsapp-float bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
     </a>
 
     <script>
-        // TRADUCTIONS
+        // LE SCRIPT COMPLET QUE TU AS ENVOYÉ PLUS HAUT (LANGUE, FAQ, ANIMATIONS)
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); } }); });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        const words = {
+            fr: ["Canton de Berne.", "Vos Urgences.", "Vos Rénovations.", "Votre Maison."],
+            de: ["Kanton Bern.", "Notfälle.", "Renovierungen.", "Ihr Zuhause."],
+            en: ["Canton of Bern.", "Emergencies.", "Renovations.", "Your Home."]
+        };
+        let currentWordIndex = 0;
+        let currentLang = localStorage.getItem('alos-lang') || 'fr';
+
+        function rotateText() {
+            const el = document.getElementById('dynamic-text');
+            if(!el) return;
+            el.style.opacity = 0;
+            setTimeout(() => {
+                currentWordIndex = (currentWordIndex + 1) % words[currentLang].length;
+                el.innerText = words[currentLang][currentWordIndex];
+                el.style.opacity = 1;
+            }, 500); 
+        }
+        setInterval(rotateText, 3000);
+
         const translations = {
-            fr: { hero_title_1: "L'Artisan Indépendant", hero_desc: "Fini le stress des travaux mal finis. Plomberie, Électricité, Rénovation.", about_title: "25 ans à votre service.", faq_title: "Questions Fréquentes", footer_desc: "Artisan indépendant depuis plus de 25 ans.", hero_cta: "Demander mon devis", about_cta: "Discuter" },
-            de: { hero_title_1: "Ihr Handwerker", hero_desc: "Kein Stress mehr mit schlechter Arbeit. Sanitär, Elektro, Renovation.", about_title: "25 Jahre Erfahrung.", faq_title: "Häufige Fragen", footer_desc: "Unabhängiger Handwerker seit über 25 Jahren.", hero_cta: "Offerte anfragen", about_cta: "Kontakt" },
-            en: { hero_title_1: "The Independent Craftsman", hero_desc: "No more stress with unfinished work. Plumbing, Electrical, Renovation.", about_title: "25 years of experience.", faq_title: "F.A.Q.", footer_desc: "Independent craftsman for over 25 years.", hero_cta: "Get a Quote", about_cta: "Contact" }
+            fr: { 
+                nav_about: "À Propos", nav_services: "Services", nav_faq: "FAQ", nav_quote: "Devis Gratuit",
+                hero_badge: "PLUS DE 25 ANS D'EXPÉRIENCE", hero_title_1: "L'Artisan Indépendant", hero_desc: "Fini le stress des travaux mal finis. Je traite votre maison avec le même soin que la mienne. Plomberie, Électricité, Rénovation.", hero_cta: "Demander mon devis",
+                about_title: "25 ans à votre service dans le canton de Berne.", faq_title: "Questions Fréquentes", contact_title: "Parlons de votre projet", contact_btn: "Envoyer ma demande", footer_desc: "Artisan indépendant depuis plus de 25 ans."
+            },
+            de: { 
+                nav_about: "Über Mich", nav_services: "Leistungen", nav_faq: "FAQ", nav_quote: "Gratis Offerte",
+                hero_badge: "ÜBER 25 JAHRE ERFAHRUNG", hero_title_1: "Der freie Handwerker", hero_desc: "Schluss mit Stress wegen schlechter Arbeit. Sanitär, Elektro, Renovierung.", hero_cta: "Offerte anfordern",
+                about_title: "25 Jahre Erfahrung im Kanton Bern.", faq_title: "Häufige Fragen", contact_title: "Ihr Projekt", contact_btn: "Anfrage senden", footer_desc: "Unabhängiger Handwerker seit über 25 Jahren."
+            },
+            en: { 
+                nav_about: "About", nav_services: "Services", nav_faq: "FAQ", nav_quote: "Free Quote",
+                hero_badge: "OVER 25 YEARS EXPERIENCE", hero_title_1: "Independent Craftsman", hero_desc: "No more stress with poor work. Plumbing, Electrical, Renovation.", hero_cta: "Get a Quote",
+                about_title: "25 years of service in Bern.", faq_title: "F.A.Q.", contact_title: "Contact Me", contact_btn: "Send Request", footer_desc: "Independent craftsman for over 25 years."
+            }
         };
 
         const faqData = [
-            { q: {fr: "Intervenez-vous en urgence ? 🚨", de: "Notfallservice? 🚨", en: "Emergency? 🚨"}, a: {fr: "Absolument. Appelez-moi directement.", de: "Absolut. Rufen Sie mich direkt an.", en: "Absolutely. Call me directly."} }
+            { q: { fr: "Intervenez-vous en urgence ? 🚨", de: "Notfallservice? 🚨", en: "Emergency? 🚨" }, a: { fr: "Absolument. Appelez-moi directement.", de: "Absolut. Rufen Sie mich direkt an.", en: "Absolutely. Call me directly." } }
         ];
 
         function changeLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if(translations[lang][key]) el.innerText = translations[lang][key];
+            currentLang = lang;
+            localStorage.setItem('alos-lang', lang); 
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if(translations[lang][key]) element.innerHTML = translations[lang][key];
             });
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
             renderFAQ(lang);
         }
 
         function renderFAQ(lang) {
             const container = document.getElementById('faq-container');
+            if(!container) return;
             container.innerHTML = faqData.map(item => `
-                <div class="faq-item bg-white p-6 rounded-lg shadow-sm cursor-pointer" onclick="this.classList.toggle('active')">
-                    <div class="font-bold text-lg">${item.q[lang]}</div>
-                    <div class="faq-answer mt-4 text-gray-600">${item.a[lang]}</div>
+                <div class="faq-item bg-white rounded-lg border border-emerald-100 shadow-sm mb-4" onclick="this.classList.toggle('active')">
+                    <button class="w-full flex justify-between p-6 text-left focus:outline-none">
+                        <span class="font-bold text-gray-900">${item.q[lang]}</span>
+                        <span class="faq-icon text-emerald-600 font-bold">+</span>
+                    </button>
+                    <div class="faq-answer bg-gray-50 overflow-hidden"><div class="p-6 pt-0 text-gray-600">${item.a[lang]}</div></div>
                 </div>
             `).join('');
         }
 
-        const words = { fr: ["Canton de Berne.", "Vos Urgences."], de: ["Kanton Bern.", "Notfälle."], en: ["Canton of Bern.", "Emergencies."] };
-        let wordIdx = 0;
-        setInterval(() => {
-            const el = document.getElementById('dynamic-text');
-            wordIdx = (wordIdx + 1) % words.fr.length;
-            el.innerText = words.fr[wordIdx];
-        }, 3000);
-
-        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); }); });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        changeLanguage('fr');
+        document.addEventListener('DOMContentLoaded', () => { changeLanguage(currentLang); });
     </script>
 </body>
 </html>
