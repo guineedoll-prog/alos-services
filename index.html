@@ -98,7 +98,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 13fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             text-align: center;
         }
@@ -108,11 +108,6 @@
             background: var(--light-color);
             border-radius: 10px;
             transition: transform 0.3s;
-        }
-
-        .service-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .service-box i {
@@ -129,7 +124,7 @@
             object-fit: cover;
             border: 6px solid var(--primary-color);
             display: block;
-            margin: 0 auto 20px;
+            margin: 20px auto;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
@@ -209,7 +204,7 @@
         <div class="container" style="text-align:center;">
             <h2>À Propos de Moi</h2>
             <img src="moi.jpg" alt="Alos Services - Votre artisan" class="profile-img">
-            <p>Bonjour, je suis votre artisan de confiance chez <strong>ALOS SERVICES</strong>. Spécialisé dans la maintenance technique et la rénovation, j'interviens rapidement à Berne et dans toute la région pour garantir le confort et la sécurité de votre habitat.</p>
+            <p>Bonjour, je suis votre artisan de confiance chez <strong>ALOS SERVICES</strong>. Spécialisé dans la maintenance technique et la rénovation, j'interviens rapidement à Berne et dans toute la région.</p>
         </div>
     </section>
 
@@ -220,17 +215,17 @@
                 <div class="service-box">
                     <i class="fas fa-faucet"></i>
                     <h3>Plomberie</h3>
-                    <p>Réparation de fuites, débouchage, installation de sanitaires et robinetterie.</p>
+                    <p>Réparation de fuites, débouchage, installation de sanitaires.</p>
                 </div>
                 <div class="service-box">
                     <i class="fas fa-bolt"></i>
                     <h3>Électricité</h3>
-                    <p>Mise aux normes, dépannage, installation de luminaires et tableaux électriques.</p>
+                    <p>Dépannage, installation de luminaires et tableaux électriques.</p>
                 </div>
                 <div class="service-box">
                     <i class="fas fa-fire"></i>
                     <h3>Chauffage</h3>
-                    <p>Entretien de chaudières, purge de radiateurs et optimisation énergétique.</p>
+                    <p>Entretien et optimisation énergétique.</p>
                 </div>
             </div>
         </div>
@@ -243,22 +238,14 @@
                 <tr>
                     <th>Service</th>
                     <th>Prix Estimé (CHF)</th>
-                    <th>Détails</th>
                 </tr>
                 <tr>
                     <td>Dépannage Rapide</td>
                     <td>Dès 80.-</td>
-                    <td>Déplacement inclus (Berne)</td>
                 </tr>
                 <tr>
                     <td>Heure de Main d'Œuvre</td>
                     <td>95.- / heure</td>
-                    <td>Travaux de rénovation</td>
-                </tr>
-                <tr>
-                    <td>Forfait Maintenance</td>
-                    <td>Sur devis</td>
-                    <td>Entretien annuel</td>
                 </tr>
             </table>
         </div>
@@ -267,15 +254,13 @@
     <section id="contact" style="text-align:center; background:#eee;">
         <div class="container">
             <h2>Prêt à démarrer votre projet ?</h2>
-            <p>Contactez-moi directement pour un devis gratuit et personnalisé.</p>
             <p><i class="fas fa-phone"></i> <strong>076 533 01 47</strong></p>
-            <p><i class="fas fa-envelope"></i> <strong>alo-services@hotmail.com</strong></p>
-            <a href="https://wa.me/41765330147" class="contact-btn"><i class="fab fa-whatsapp"></i> Contactez-moi sur WhatsApp</a>
+            <a href="https://wa.me/41765330147" class="contact-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </section>
 
     <footer>
-        <p>ALOS SERVICES &copy; 2026 | Berne, Suisse | <a href="https://alos-services.ch" style="color:#fff;">www.alos-services.ch</a></p>
+        <p>ALOS SERVICES &copy; 2026 | Berne, Suisse</p>
     </footer>
 </body>
 </html>
