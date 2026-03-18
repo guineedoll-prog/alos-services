@@ -3,100 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALOS SERVICES | Artisan Berne</title>
+    <title>ALOS SERVICES | Plombier, Électricien & Rénovation à Berne (25 ans d'exp)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Manrope', sans-serif; overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
         .fun-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(135deg, #a7f3d0 0%, #f3f4f6 100%); overflow: hidden; }
         .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
-        .circles li { position: absolute; display: block; list-style: none; width: 20px; height: 20px; background: rgba(4, 120, 87, 0.4); animation: animate 25s linear infinite; bottom: -150px; border-radius: 4px; }
+        .circles li { position: absolute; display: block; list-style: none; width: 20px; height: 20px; background: rgba(4, 120, 87, 0.6); animation: animate 25s linear infinite; bottom: -150px; border-radius: 4px; }
         .circles li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
         .circles li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
         .circles li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
         .circles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
         .circles li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+        .circles li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+        .circles li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+        .circles li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+        .circles li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+        .circles li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
         @keyframes animate { 0% { transform: translateY(0) rotate(0deg); opacity: 1; border-radius: 10%; } 100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; } }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="text-gray-900">
-    <div class="fun-background"><ul class="circles"><li></li><li></li><li></li><li></li><li></li></ul></div>
+<body class="text-gray-900 pb-16 md:pb-0 relative">
+    <div class="fun-background"><ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div>
 
     <nav class="fixed w-full bg-white/90 backdrop-blur shadow-sm z-50 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="font-serif text-xl font-bold">ALOS SERVICES<span class="text-emerald-600">.</span></div>
+        <div class="container mx-auto px-6 flex justify-between items-center font-bold">
+            <div>ALOS SERVICES<span class="text-emerald-600">.</span></div>
             <div class="flex gap-4">
-                <button onclick="changeLanguage('fr')" class="font-bold hover:text-emerald-600">FR</button>
-                <button onclick="changeLanguage('de')" class="font-bold hover:text-emerald-600">DE</button>
+                <button onclick="changeLanguage('fr')">FR</button>
+                <button onclick="changeLanguage('de')">DE</button>
             </div>
         </div>
     </nav>
 
-    <header class="pt-32 pb-20 text-center container mx-auto px-6">
-        <h1 class="text-5xl font-bold mb-6" data-i18n="hero_title">L'Artisan Indépendant à Berne</h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto" data-i18n="hero_desc">Plomberie, Électricité, Peinture et Rénovation. 25 ans d'expérience à votre service.</p>
-        <a href="#contact" class="bg-emerald-600 text-white px-8 py-4 rounded-full font-bold shadow-lg" data-i18n="hero_cta">Devis Gratuit</a>
+    <header class="pt-32 pb-24 text-center container mx-auto px-6">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6" data-i18n="hero_title">L'Artisan Indépendant à Berne</h1>
+        <p class="text-xl text-gray-600" data-i18n="hero_desc">Plomberie, Électricité, Peinture, Bricolage, Extérieur, Rénovation.</p>
     </header>
 
-    <section id="about" class="py-20 container mx-auto px-6 reveal">
+    <section id="about" class="py-24 container mx-auto px-6 reveal">
         <div class="flex flex-col lg:flex-row items-center gap-12">
-            <div class="lg:w-1/2">
-                <img src="moi.jpg" alt="Alos Services" class="rounded-2xl shadow-2xl border-8 border-white w-full max-w-md mx-auto" onerror="this.src='https://via.placeholder.com/500x600?text=ALOS+SERVICES'">
-            </div>
-            <div class="lg:w-1/2">
-                <h2 class="text-3xl font-bold mb-6" data-i18n="about_title">Mon Parcours</h2>
-                <p class="text-lg text-gray-600 mb-6" data-i18n="about_text">Artisan indépendant depuis 25 ans dans le canton de Berne. Je privilégie le contact direct et la qualité suisse.</p>
+            <img src="moi.jpg" alt="ALOS" class="rounded-2xl shadow-2xl w-full max-w-md" onerror="this.src='https://via.placeholder.com/400x500'">
+            <div>
+                <h2 class="text-4xl font-bold mb-6" data-i18n="about_title">25 ans d'expérience</h2>
+                <p class="text-lg text-gray-600" data-i18n="about_text">Votre artisan de confiance pour tous vos travaux dans le canton de Berne.</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-white/50 reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12" data-i18n="srv_title">Mes 6 Domaines d'Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_1">Plomberie</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_1_desc">Fuites, sanitaires, robinetterie.</p>
+    <section id="services" class="py-24 bg-white/60 reveal">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Mes Domaines d'Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_1">Plomberie</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_1_desc">Fuites, sanitaires, robinetterie.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_2">Électricité</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_2_desc">Dépannage, prises, luminaires.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_2">Électricité</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_2_desc">Dépannage, prises, luminaires.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_3">Peinture</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_3_desc">Intérieur, retouches, finitions.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_3">Peinture</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_3_desc">Intérieur, retouches, finitions.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_4">Petit Bricolage</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_4_desc">Meubles, serrures, étagères.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_4">Petit Bricolage</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_4_desc">Meubles, serrures, étagères.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_5">Extérieur</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_5_desc">Nettoyage terrasse, jardinage.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_5">Extérieur</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_5_desc">Nettoyage terrasse, jardinage.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-emerald-50 hover:shadow-xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_6">Rénovation</h3>
-                    <p class="text-sm text-gray-500" data-i18n="srv_6_desc">Parquet, sols, isolation.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+                    <h3 class="font-bold text-xl mb-2" data-i18n="srv_6">Rénovation</h3>
+                    <p class="text-gray-500 text-sm" data-i18n="srv_6_desc">Parquet, sols, isolation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 bg-gray-900 text-white text-center">
-        <h2 class="text-3xl font-bold mb-4">Contactez-moi</h2>
-        <p class="text-2xl font-bold text-emerald-400 mb-6">076 533 01 47</p>
-        <p class="text-gray-400">© 2026 ALOS SERVICES - Berne</p>
+    <footer class="py-20 bg-gray-900 text-white text-center">
+        <p class="text-2xl font-bold mb-4">076 533 01 47</p>
+        <p class="text-gray-500">© 2026 ALOS SERVICES</p>
     </footer>
 
     <script>
         const translations = {
             fr: {
-                hero_title: "L'Artisan Indépendant à Berne", hero_desc: "Plomberie, Électricité, Peinture et Rénovation. 25 ans d'expérience.", hero_cta: "Devis Gratuit",
-                about_title: "Mon Parcours", about_text: "Artisan indépendant depuis 25 ans dans le canton de Berne. Je privilégie le contact direct et la qualité suisse.",
-                srv_title: "Mes 6 Domaines d'Expertise",
+                hero_title: "L'Artisan Indépendant à Berne", hero_desc: "Plomberie, Électricité, Peinture, Bricolage, Extérieur, Rénovation.",
+                about_title: "25 ans d'expérience", about_text: "Votre artisan de confiance dans le canton de Berne.",
                 srv_1: "Plomberie", srv_1_desc: "Fuites, sanitaires, robinetterie.",
                 srv_2: "Électricité", srv_2_desc: "Dépannage, prises, luminaires.",
                 srv_3: "Peinture", srv_3_desc: "Intérieur, retouches, finitions.",
@@ -105,9 +105,8 @@
                 srv_6: "Rénovation", srv_6_desc: "Parquet, sols, isolation."
             },
             de: {
-                hero_title: "Ihr Handwerker in Bern", hero_desc: "Sanitär, Elektro, Malerei und Renovierung. 25 Jahre Erfahrung.", hero_cta: "Gratis Offerte",
-                about_title: "Über Mich", about_text: "Seit 25 Jahren unabhängiger Handwerker im Kanton Bern. Ich setze auf direkten Kontakt und Schweizer Qualität.",
-                srv_title: "Meine 6 Fachgebiete",
+                hero_title: "Ihr Handwerker in Bern", hero_desc: "Sanitär, Elektro, Malerei, Handwerk, Aussenbereich, Renovierung.",
+                about_title: "25 Jahre Erfahrung", about_text: "Ihr vertrauenswürdiger Handwerker im Kanton Bern.",
                 srv_1: "Sanitär", srv_1_desc: "Lecks, Sanitär, Armaturen.",
                 srv_2: "Elektro", srv_2_desc: "Pannenhilfe, Steckdosen, Lampen.",
                 srv_3: "Malerarbeiten", srv_3_desc: "Innenräume, Ausbesserungen.",
@@ -128,7 +127,6 @@
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
         });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        
         changeLanguage('fr');
     </script>
 </body>
