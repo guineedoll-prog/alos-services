@@ -57,15 +57,19 @@
 
     <header class="pt-32 pb-24 text-center relative z-10">
         <div class="container mx-auto px-6 max-w-4xl">
-            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/80 text-emerald-800 font-bold text-xs uppercase mb-8 rounded-full border border-emerald-200 shadow-sm">
+            <div class="hero-animate inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur text-emerald-800 font-bold text-xs uppercase tracking-widest mb-8 rounded-full border border-emerald-200 shadow-sm">
                 <span data-i18n="hero_badge">PLUS DE 25 ANS D'EXPÉRIENCE</span>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 text-gray-900 leading-tight">
                 <span data-i18n="hero_title_1">L'Artisan Indépendant</span> <br/>
-                <span class="text-emerald-600" id="dynamic-text">Canton de Berne.</span>
+                <span class="text-emerald-600 typing-cursor" id="dynamic-text">Canton de Berne.</span>
             </h1>
             <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto" data-i18n="hero_desc">Fini le stress des travaux mal finis. Je traite votre maison avec le même soin que la mienne. Plomberie, Électricité, Rénovation.</p>
-            <a href="#contact" class="bg-emerald-600 text-white px-8 py-4 rounded font-bold hover:bg-emerald-800 transition-all shadow-lg text-lg" data-i18n="hero_cta">Demander mon devis</a>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded font-bold hover:bg-emerald-800 transition-all shadow-lg hover:-translate-y-1 text-lg">
+                    <span data-i18n="hero_cta">Demander mon devis</span>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -73,86 +77,80 @@
         <div class="container mx-auto px-6 flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
             <div class="w-full lg:w-1/2">
                 <div class="relative rounded-2xl overflow-hidden shadow-2xl border-8 border-white bg-gray-100">
-                    <img src="moi.jpg" alt="L'Artisan ALOS SERVICES" class="w-full h-auto max-h-[500px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1533038590840-1cde6e668a91'">
+                    <img src="moi.jpg" alt="L'Artisan ALOS SERVICES" class="w-full h-auto max-h-[500px] object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1533038590840-1cde6e668a91'">
                     <div class="absolute bottom-6 right-6 bg-emerald-600 text-white p-6 rounded-xl shadow-lg border-4 border-white">
-                        <p class="text-4xl font-bold">25</p>
+                        <p class="font-serif text-4xl font-bold mb-0">25</p>
                         <p class="text-xs font-bold uppercase tracking-widest" data-i18n="about_badge">ANS D'EXPÉRIENCE</p>
                     </div>
                 </div>
             </div>
             <div class="w-full lg:w-1/2">
                 <span class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2 block" data-i18n="about_pretitle">MON PARCOURS</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-serif leading-tight" data-i18n="about_title">Votre artisan de confiance à Berne.</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-serif leading-tight" data-i18n="about_title">25 ans à votre service dans le canton de Berne.</h2>
                 <div class="space-y-6 text-gray-600 text-lg leading-relaxed border-l-4 border-emerald-100 pl-6 bg-white/90 p-4 rounded-r-lg shadow-sm">
-                    <p data-i18n="about_story_1">Je suis un artisan fier de ses racines. Depuis un quart de siècle, je sillonne les routes de Berne et du Seeland. J'ai vu l'évolution des techniques, mais une chose n'a jamais changé : l'importance du travail bien fait.</p>
-                    <p data-i18n="about_story_2">Mon choix de rester 100% indépendant est volontaire. Je voulais garder mes outils en main et le contact direct avec vous.</p>
+                    <p data-i18n="about_story_1">Je suis un artisan fier de ses racines. Depuis un quart de siècle, je sillonne les routes de Berne et du Seeland. J'ai vu l'évolution des techniques, mais une chose n'a jamais changé : <strong>l'importance du travail bien fait.</strong></p>
+                    <p data-i18n="about_story_2">Mon choix de rester <strong>100% indépendant</strong> est volontaire. Je ne voulais pas devenir un numéro dans une franchise ou un gestionnaire de bureau. Je voulais garder mes outils en main et le contact direct avec vous.</p>
                 </div>
-                <div class="mt-8">
-                    <a href="#contact" class="bg-gray-900 text-white font-bold px-8 py-4 rounded-full" data-i18n="about_cta">Discuter avec l'artisan</a>
+                <div class="mt-12">
+                    <a href="#contact" class="inline-block bg-gray-900 text-white font-bold px-8 py-4 rounded-full hover:bg-emerald-600 transition-all shadow-lg hover:-translate-y-1" data-i18n="about_cta">Discuter avec l'artisan</a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="py-16 bg-gray-900 text-white reveal relative z-10">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div><div class="text-5xl font-bold text-emerald-500 mb-2">25+</div><div class="text-gray-400 uppercase text-sm" data-i18n="stat_1">Années d'expérience</div></div>
-            <div><div class="text-5xl font-bold text-emerald-500 mb-2">100%</div><div class="text-gray-400 uppercase text-sm" data-i18n="stat_2">Indépendant</div></div>
-            <div><div class="text-5xl font-bold text-emerald-500 mb-2">1000+</div><div class="text-gray-400 uppercase text-sm" data-i18n="stat_3">Clients satisfaits</div></div>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-700">
+            <div class="p-4"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">25+</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_1">Années d'expérience</div></div>
+            <div class="p-4"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">100%</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_2">Indépendant & Libre</div></div>
+            <div class="p-4"><div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">1000+</div><div class="text-gray-400 uppercase tracking-widest text-sm" data-i18n="stat_3">Clients à Berne & Seeland</div></div>
         </div>
     </section>
 
     <section id="services" class="py-24 relative z-10 reveal">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16 font-serif" data-i18n="services_title">Mes Domaines d'Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_1_title">Plomberie</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_1_li_1">Recherche de fuites</li>
-                        <li data-i18n="srv_1_li_2">Robinets & Mitigeurs</li>
-                        <li data-i18n="srv_1_li_3">Débouchage & Sanitaires</li>
-                    </ul>
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 font-serif" data-i18n="services_title">Mes Domaines d'Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-plomberie.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1585704032915-c3400ca199e7'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_1_title">Plomberie</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_1_li_1">Recherche de fuites</li><li data-i18n="srv_1_li_2">Robinetterie</li><li data-i18n="srv_1_li_3">Débouchage</li></ul>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_2_title">Électricité</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_2_li_1">Pose de luminaires</li>
-                        <li data-i18n="srv_2_li_2">Remplacement prises</li>
-                        <li data-i18n="srv_2_li_3">Mise en sécurité</li>
-                    </ul>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-electricite.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_2_title">Électricité</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_2_li_1">Luminaires</li><li data-i18n="srv_2_li_2">Prises</li><li data-i18n="srv_2_li_3">Mise en sécurité</li></ul>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_3_title">Peinture</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_3_li_1">Murs & Plafonds</li>
-                        <li data-i18n="srv_3_li_2">Retouches précises</li>
-                        <li data-i18n="srv_3_li_3">Protection des sols</li>
-                    </ul>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-peinture.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1562259949-e8e7689d7828'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_3_title">Peinture</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_3_li_1">Murs & Plafonds</li><li data-i18n="srv_3_li_2">Retouches</li><li data-i18n="srv_3_li_3">Protection</li></ul>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_4_title">Petit Bricolage</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_4_li_1">Montage de meubles</li>
-                        <li data-i18n="srv_4_li_2">Serrures & Poignées</li>
-                        <li data-i18n="srv_4_li_3">Tringles & Étagères</li>
-                    </ul>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-bricolage.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_4_title">Petit Bricolage</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_4_li_1">Montage meubles</li><li data-i18n="srv_4_li_2">Serrures</li><li data-i18n="srv_4_li_3">Étagères</li></ul>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_5_title">Extérieur</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_5_li_1">Nettoyage haute pression</li>
-                        <li data-i18n="srv_5_li_2">Entretien terrasse</li>
-                        <li data-i18n="srv_5_li_3">Petits travaux jardin</li>
-                    </ul>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-exterieur.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1558904541-efa843a96f01'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_5_title">Extérieur</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_5_li_1">Haute pression</li><li data-i18n="srv_5_li_2">Terrasse</li><li data-i18n="srv_5_li_3">Jardin</li></ul>
+                    </div>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-2xl transition-all">
-                    <h3 class="text-xl font-bold mb-4" data-i18n="srv_6_title">Rénovation</h3>
-                    <ul class="text-gray-600 text-sm space-y-2">
-                        <li data-i18n="srv_6_li_1">Pose parquet/laminé</li>
-                        <li data-i18n="srv_6_li_2">Isolation</li>
-                        <li data-i18n="srv_6_li_3">Finitions</li>
-                    </ul>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="h-48 overflow-hidden"><img src="images/service-renovation.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e'"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4" data-i18n="srv_6_title">Rénovation</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm"><li data-i18n="srv_6_li_1">Parquet/Laminé</li><li data-i18n="srv_6_li_2">Isolation</li><li data-i18n="srv_6_li_3">Finitions</li></ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,22 +161,20 @@
             <h2 class="text-3xl font-bold text-center mb-12" data-i18n="comp_title">Pourquoi choisir un indépendant ?</h2>
             <div class="overflow-x-auto rounded-xl shadow-xl border border-gray-200 bg-white">
                 <table class="w-full text-left">
-                    <tr class="bg-gray-50 border-b">
-                        <th class="p-6 font-semibold" data-i18n="comp_col_criteria">Critères</th>
-                        <th class="p-6 text-emerald-600 font-bold">ALOS SERVICES</th>
-                        <th class="p-6 font-semibold" data-i18n="comp_col_big">Grandes Enseignes</th>
-                    </tr>
-                    <tr class="border-b"><td class="p-6 font-bold" data-i18n="row_1_crit">Interlocuteur</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_1_me">Unique (Moi)</td><td class="p-6 text-gray-500">Multiple</td></tr>
-                    <tr class="border-b"><td class="p-6 font-bold" data-i18n="row_2_crit">Transparence Prix</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_2_me">Devis Fixe</td><td class="p-6 text-gray-500">Frais élevés</td></tr>
-                    <tr class="border-b"><td class="p-6 font-bold" data-i18n="row_3_crit">Qualité</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_3_me">Détail</td><td class="p-6 text-gray-500">À la chaîne</td></tr>
+                    <thead><tr class="bg-gray-50 border-b"><th class="p-6 font-semibold" data-i18n="comp_col_criteria">Critères</th><th class="p-6 text-emerald-600 font-bold">ALOS SERVICES</th><th class="p-6 font-semibold" data-i18n="comp_col_big">Grandes Enseignes</th></tr></thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr><td class="p-6 font-bold" data-i18n="row_1_crit">Interlocuteur</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_1_me">Unique (Moi)</td><td class="p-6 text-gray-500">Multiple</td></tr>
+                        <tr><td class="p-6 font-bold" data-i18n="row_2_crit">Transparence Prix</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_2_me">Devis Fixe</td><td class="p-6 text-gray-500">Frais élevés</td></tr>
+                        <tr><td class="p-6 font-bold" data-i18n="row_3_crit">Qualité</td><td class="p-6 font-bold text-emerald-900" data-i18n="row_3_me">Détail</td><td class="p-6 text-gray-500">À la chaîne</td></tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-emerald-50 reveal relative z-10 text-center">
+    <section id="faq" class="py-24 bg-emerald-50 reveal relative z-10">
         <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-4xl font-bold mb-12 font-serif" data-i18n="faq_title">Questions Fréquentes</h2>
+            <h2 class="text-4xl font-bold text-center mb-12 font-serif" data-i18n="faq_title">Questions Fréquentes</h2>
             <div id="faq-container" class="space-y-4"></div>
         </div>
     </section>
@@ -186,11 +182,10 @@
     <section id="contact" class="py-24 bg-white reveal relative z-10">
         <div class="container mx-auto px-6 max-w-3xl text-center">
             <h2 class="text-4xl font-bold mb-4 font-serif" data-i18n="contact_title">Parlons de votre projet</h2>
-            <p class="text-gray-500 mb-8" data-i18n="contact_sub">Réponse garantie sous 24h</p>
             <form action="https://formsubmit.co/a-ramadani77@hotmail.com" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Nom complet" class="w-full p-4 border rounded bg-gray-50" required>
-                <input type="tel" name="phone" placeholder="076 533 01 47" class="w-full p-4 border rounded bg-gray-50" required>
-                <textarea name="message" rows="5" placeholder="Détaillez vos travaux..." class="w-full p-4 border rounded bg-gray-50" required></textarea>
+                <input type="text" name="name" placeholder="Votre Nom" class="w-full p-4 border rounded bg-gray-50" required>
+                <input type="tel" name="phone" placeholder="Téléphone" class="w-full p-4 border rounded bg-gray-50" required>
+                <textarea name="message" rows="5" placeholder="Détaillez vos besoins..." class="w-full p-4 border rounded bg-gray-50" required></textarea>
                 <button type="submit" class="w-full bg-emerald-600 text-white font-bold py-4 rounded hover:bg-emerald-800 transition-all text-lg shadow-lg" data-i18n="contact_btn">Envoyer ma demande</button>
             </form>
         </div>
@@ -199,8 +194,8 @@
     <footer class="bg-gray-900 text-white py-16 text-center relative z-10">
         <div class="font-serif text-3xl font-bold mb-4">ALOS SERVICES<span class="text-emerald-500">.</span></div>
         <p class="text-gray-400 mb-6" data-i18n="footer_desc">Artisan indépendant depuis plus de 25 ans.</p>
-        <a href="tel:+41765330147" class="text-2xl font-bold hover:text-emerald-400 transition-colors">076 533 01 47</a>
-        <p class="mt-8 text-gray-600 text-xs">© 2026 ALOS SERVICES | Canton de Berne, Suisse</p>
+        <a href="tel:+41765330147" class="text-2xl font-bold hover:text-emerald-400 transition-colors font-bold">076 533 01 47</a>
+        <div class="mt-12 text-gray-600 text-xs">© 2026 ALOS SERVICES | Canton de Berne, Suisse</div>
     </footer>
 
     <a href="https://wa.me/41765330147" target="_blank" class="whatsapp-float bg-green-500 text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform">
@@ -213,58 +208,66 @@
                 nav_about: "À Propos", nav_services: "Services", nav_faq: "FAQ", nav_quote: "Devis Gratuit",
                 hero_badge: "PLUS DE 25 ANS D'EXPÉRIENCE", hero_title_1: "L'Artisan Indépendant", hero_desc: "Fini le stress des travaux mal finis. Je traite votre maison avec le même soin que la mienne. Plomberie, Électricité, Rénovation.", hero_cta: "Demander mon devis",
                 about_pretitle: "MON PARCOURS", about_title: "Votre artisan de confiance à Berne.", about_badge: "ANS D'EXPÉRIENCE",
-                about_story_1: "Je suis un artisan fier de ses racines. Depuis un quart de siècle, je sillonne les routes de Berne et du Seeland. Une chose n'a jamais changé : l'importance du travail bien fait.",
+                about_story_1: "Depuis un quart de siècle, je sillonne les routes de Berne et du Seeland. Une chose n'a jamais changé : l'importance du travail bien fait.",
                 about_story_2: "Mon choix de rester 100% indépendant est volontaire. Je voulais garder mes outils en main et le contact direct avec vous.",
-                about_cta: "Discuter avec l'artisan",
-                stat_1: "Expérience", stat_2: "Indépendant", stat_3: "Clients satisfaits",
+                about_cta: "Discuter avec l'artisan", stat_1: "Années d'expérience", stat_2: "Indépendant", stat_3: "Clients satisfaits",
                 services_title: "Mes Domaines d'Expertise",
-                srv_1_title: "Plomberie", srv_1_li_1: "Recherche de fuites, robinets, sanitaires.",
-                srv_2_title: "Électricité", srv_2_li_1: "Pose de luminaires, prises, dépannage.",
-                srv_3_title: "Peinture", srv_3_li_1: "Murs, plafonds, finitions impeccables.",
-                srv_4_title: "Petit Bricolage", srv_4_li_1: "Meubles, serrures, étagères.",
-                srv_5_title: "Extérieur", srv_5_li_1: "Haute pression, terrasse, jardin.",
-                srv_6_title: "Rénovation", srv_6_li_1: "Sols, isolation et finitions.",
+                srv_1_title: "Plomberie", srv_1_li_1: "Fuites", srv_1_li_2: "Robinets", srv_1_li_3: "Sanitaires",
+                srv_2_title: "Électricité", srv_2_li_1: "Luminaires", srv_2_li_2: "Prises", srv_2_li_3: "Sécurité",
+                srv_3_title: "Peinture", srv_3_li_1: "Murs", srv_3_li_2: "Retouches", srv_3_li_3: "Sols",
+                srv_4_title: "Bricolage", srv_4_li_1: "Meubles", srv_4_li_2: "Serrures", srv_4_li_3: "Étagères",
+                srv_5_title: "Extérieur", srv_5_li_1: "Haute pression", srv_5_li_2: "Terrasse", srv_5_li_3: "Jardin",
+                srv_6_title: "Rénovation", srv_6_li_1: "Parquet", srv_6_li_2: "Isolation", srv_6_li_3: "Finitions",
                 comp_title: "Pourquoi choisir un indépendant ?", comp_col_criteria: "Critères", comp_col_big: "Grandes Enseignes",
                 row_1_crit: "Interlocuteur", row_1_me: "Unique (Moi)", row_2_crit: "Prix", row_2_me: "Devis Fixe", row_3_crit: "Qualité", row_3_me: "Détail",
-                faq_title: "Questions Fréquentes", contact_title: "Parlons de votre projet", contact_sub: "Réponse sous 24h", contact_btn: "Envoyer ma demande", footer_desc: "Artisan indépendant au service des particuliers et régies depuis plus de 25 ans."
+                faq_title: "Questions Fréquentes", contact_title: "Parlons de votre projet", contact_btn: "Envoyer ma demande", footer_desc: "Artisan indépendant au service des particuliers et régies depuis plus de 25 ans."
             },
             de: {
-                nav_about: "Über Mich", nav_services: "Leistungen", nav_faq: "FAQ", nav_quote: "Gratis Offerte",
-                hero_badge: "ÜBER 25 JAHRE ERFAHRUNG", hero_title_1: "Der freie Handwerker", hero_desc: "Kein Stress mehr mit schlechter Arbeit. Sanitär, Elektro, Renovation.", hero_cta: "Offerte anfragen",
-                about_pretitle: "MEIN WEG", about_title: "Ihr Handwerker in Bern.", about_badge: "JAHRE ERFAHRUNG",
-                about_story_1: "Seit 25 Jahren bin ich in Bern unterwegs. Eines hat sich nie geändert: Gute Arbeit zählt.",
-                about_story_2: "Ich bleibe 100% unabhängig, um den direkten Kontakt zu meinen Kunden zu pflegen.",
-                about_cta: "Kontakt aufnehmen",
-                stat_1: "Erfahrung", stat_2: "Unabhängig", stat_3: "Zufriedene Kunden",
-                services_title: "Meine Fachgebiete",
-                srv_1_title: "Sanitär", srv_1_li_1: "Leckortung, Armaturen, Sanitär.",
-                srv_2_title: "Elektro", srv_2_li_1: "Lampen, Steckdosen, Pannenhilfe.",
-                srv_3_title: "Maler", srv_3_li_1: "Wände, Decken, Ausbesserungen.",
-                srv_4_title: "Handwerk", srv_4_li_1: "Möbel, Schlösser, Regale.",
-                srv_5_title: "Aussen", srv_5_li_1: "Terrasse, Hochdruck, Garten.",
-                srv_6_title: "Renovierung", srv_6_li_1: "Böden, Isolation, Ausbau.",
-                comp_title: "Warum unabhängig?", comp_col_criteria: "Kriterien", comp_col_big: "Großfirmen",
-                row_1_crit: "Kontakt", row_1_me: "Ich persönlich", row_2_crit: "Preis", row_2_me: "Fixpreis", row_3_crit: "Qualität", row_3_me: "Detailtreue",
-                faq_title: "Häufige Fragen", contact_title: "Ihr Projekt", contact_sub: "Antwort binnen 24h", contact_btn: "Anfrage senden", footer_desc: "Seit über 25 Jahren."
+                nav_about: "Über Mich", nav_services: "Leistungen", nav_faq: "FAQ", nav_quote: "Offerte",
+                hero_badge: "ÜBER 25 JAHRE ERFAHRUNG", hero_title_1: "Der freie Handwerker", hero_desc: "Kein Stress mehr. Sanitär, Elektro, Renovation.", hero_cta: "Offerte anfragen",
+                about_pretitle: "ÜBER MICH", about_title: "Handwerker in Bern.", about_badge: "JAHRE",
+                services_title: "Fachgebiete", srv_1_title: "Sanitär", srv_2_title: "Elektro", srv_3_title: "Maler", srv_4_title: "Handwerk", srv_5_title: "Aussen", srv_6_title: "Renovation",
+                faq_title: "FAQ", contact_title: "Projekt", contact_btn: "Senden", footer_desc: "Über 25 Jahre."
             }
         };
+
+        const faqData = [
+            { q: {fr: "Urgence ? 🚨", de: "Notfall? 🚨"}, a: {fr: "Oui, appelez le 076 533 01 47.", de: "Ja, 076 533 01 47."} },
+            { q: {fr: "Tarifs ? 💰", de: "Preise? 💰"}, a: {fr: "Devis gratuit et prix fixes.", de: "Kostenlose Offerte."} }
+        ];
 
         function changeLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) el.innerHTML = translations[lang][key];
             });
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
             renderFAQ(lang);
         }
 
         function renderFAQ(lang) {
             const container = document.getElementById('faq-container');
             if(!container) return;
-            container.innerHTML = `<div class="bg-white p-6 rounded shadow cursor-pointer text-left"><b>Intervenez-vous vite ?</b><p>Oui, 076 533 01 47.</p></div>`;
+            container.innerHTML = faqData.map(item => `
+                <div class="bg-white p-6 rounded shadow cursor-pointer text-left" onclick="this.classList.toggle('active')">
+                    <div class="flex justify-between font-bold"><span>${item.q[lang]}</span><span>+</span></div>
+                    <div class="faq-answer mt-4 text-gray-600">${item.a[lang]}</div>
+                </div>
+            `).join('');
         }
 
         const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); }); });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        const words = { fr: ["Canton de Berne.", "Vos Urgences."], de: ["Kanton Bern.", "Notfälle."] };
+        let wordIdx = 0;
+        setInterval(() => {
+            const el = document.getElementById('dynamic-text');
+            if(!el) return;
+            wordIdx = (wordIdx + 1) % words.fr.length;
+            el.innerText = words.fr[wordIdx];
+        }, 3000);
+
         changeLanguage('fr');
     </script>
 </body>
