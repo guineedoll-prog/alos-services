@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN MONEY — Press Kit</title>
+    <meta name="description" content="Green Money — Artiste hip-hop. Rap de rue brut, esthétique cinématographique. Album MP3, 2025." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a84c;
+            --dark: #0a0a0a;
+            --mid: #111111;
+            --surface: #1a1a1a;
+            --border: #2a2a2a;
+            --text: #e8e8e8;
+            --muted: #888;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
+
+        /* GRAIN OVERLAY */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.3) 40%, var(--dark) 100%),
+                        url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 0 80px 0;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 200px;
+            background: linear-gradient(to bottom, transparent, var(--dark));
+        }
+
+        .gold { color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-left: 2px solid var(--gold);
+            padding-left: 12px;
+            margin-bottom: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 32px;
+        }
+
+        .card-dark {
+            background: var(--mid);
+            border: 1px solid var(--border);
+            padding: 32px;
+        }
+
+        .stat-block {
+            border-left: 2px solid var(--gold);
+            padding-left: 20px;
+        }
+
+        .track-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .track-row:last-child { border-bottom: none; }
+
+        .bar-bg {
+            background: var(--border);
+            height: 3px;
+            width: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bar-fill {
+            position: absolute;
+            top: 0; left: 0; height: 100%;
+            background: var(--gold);
+        }
+
+        .hard-truth {
+            background: #1a0f00;
+            border-left: 3px solid var(--gold);
+            padding: 16px 20px;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: #c9a84c99;
+        }
+        .hard-truth strong { color: var(--gold); }
+
+        .influence-card {
+            border: 1px solid var(--border);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .influence-card:hover { border-color: var(--gold); }
+        .influence-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px; height: 100%;
+            background: var(--gold);
+            transform: scaleY(0);
+            transition: transform 0.3s;
+            transform-origin: bottom;
+        }
+        .influence-card:hover::before { transform: scaleY(1); }
+
+        .fan-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 28px;
+            position: relative;
+        }
+        .fan-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            line-height: 1;
+            color: var(--border);
+            position: absolute;
+            top: 16px; right: 20px;
+        }
+
+        .opportunity-block {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--gold);
+            padding: 28px;
+        }
+
+        .nav-link {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--gold); }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.25s; }
+        .delay-3 { animation-delay: 0.4s; }
+        .delay-4 { animation-delay: 0.55s; }
+
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 80px 0;
+        }
+
+        /* BOTTOM LINE */
+        .bottom-line {
+            background: linear-gradient(135deg, #0f0900 0%, #1a1200 100%);
+            border: 1px solid #3a2a00;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 90vh; padding-bottom: 60px; }
+            .card, .card-dark { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 border-b border-[#1a1a1a] bg-[#0a0a0a]/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="bebas text-xl tracking-widest gold">GREEN MONEY</span>
+            <div class="hidden md:flex gap-8">
+                <a href="#bio" class="nav-link">Bio</a>
+                <a href="#catalog" class="nav-link">Catalog</a>
+                <a href="#visual" class="nav-link">Visual</a>
+                <a href="#fans" class="nav-link">Audience</a>
+                <a href="#growth" class="nav-link">Growth</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <span class="tag">PRESS KIT 2025</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+            <div class="fade-up">
+                <span class="tag mb-6 block w-fit">RAP / HIP-HOP — PARIS</span>
+            </div>
+            <h1 class="fade-up delay-1 text-[clamp(5rem,15vw,14rem)] leading-none text-white mb-4">
+                GREEN<br><span class="gold">MONEY</span>
+            </h1>
+            <p class="fade-up delay-2 text-lg md:text-xl text-[#aaa] max-w-xl leading-relaxed mb-8">
+                Rap de rue brut. Esthétique cinématographique.<br>
+                Freddie Gibbs à la française.
+            </p>
+            <div class="fade-up delay-3 flex flex-wrap gap-4 items-center">
+                <div class="stat-block">
+                    <div class="bebas text-4xl gold">431K</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest">Streams — Wemby</div>
+                </div>
+                <div class="stat-block">
+                    <div class="bebas text-4xl gold">10.9K</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest">Auditeurs Mensuels</div>
+                </div>
+                <div class="stat-block">
+                    <div class="bebas text-4xl gold">2025</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest">Album MP3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- BIO -->
+        <section id="bio" class="pt-24 reveal">
+            <div class="section-label">Artist Bio</div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 card">
+                    <p class="text-lg leading-relaxed text-[#ccc] mb-6">
+                        Je suis Green Money, un artiste profondément ancré dans la pure culture hip-hop. Mon ADN musical fait naturellement le pont entre l'authenticité du rap français et l'énergie du rap américain. Mon style est direct, brut et très imprégné par le <em class="gold not-italic">street lifestyle</em> et l'esthétique US.
+                    </p>
+                    <p class="text-lg leading-relaxed text-[#ccc] mb-6">
+                        Ce qui drive ma musique, c'est la vérité du bitume : raconter le hustle, l'ambition, les trahisons, mais surtout la détermination pour s'en sortir. <strong class="text-white">Je ne suis pas dans la fiction — ma musique est le reflet direct de mon vécu.</strong>
+                    </p>
+                    <p class="text-lg leading-relaxed text-[#ccc]">
+                        Ma direction artistique s'inspire de Freddie Gibbs : une approche où la réalité crue de la rue rencontre une exigence musicale forte, un univers à la fois sombre, authentique et presque cinématographique. Mon but en studio est simple : retranscrire cette faim de réussir avec une esthétique pointue pour que mon public s'y reconnaisse.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="card-dark">
+                        <div class="section-label mb-4">Core Themes</div>
+                        <ul class="space-y-3 text-sm text-[#aaa]">
+                            <li class="flex gap-3 items-start">
+                                <span class="gold mt-0.5">—</span>
+                                <span><strong class="text-white">Vérité du Bitume</strong><br>Témoignage direct, sans filtre, sans fiction</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="gold mt-0.5">—</span>
+                                <span><strong class="text-white">Pont Franco-Américain</strong><br>Rap français underground x esthétique Gibbs</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="gold mt-0.5">—</span>
+                                <span><strong class="text-white">Faim de Réussir</strong><br>Hustle, sacrifice, ascension — le fil rouge</span>
+                            </li>
+                            <li class="flex gap-3 items-start">
+                                <span class="gold mt-0.5">—</span>
+                                <span><strong class="text-white">Silence Stratégique</strong><br>Scarcité contrôlée, identité cryptique</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-dark text-center">
+                        <div class="bebas text-5xl gold mb-1">€</div>
+                        <div class="text-xs text-[#666] uppercase tracking-widest">Indépendant — Aucun Label</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CATALOG -->
+        <section id="catalog" class="reveal">
+            <div class="section-label">Catalog & Streaming</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="bebas text-2xl text-white mb-6 tracking-wider">Top Tracks</h3>
+                    <div>
+                        <div class="track-row">
+                            <div>
+                                <div class="font-bold text-white text-sm">Wemby</div>
+                                <div class="text-xs text-[#666] mt-0.5">feat. La Fouine</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+                                <span class="bebas text-lg gold w-16 text-right">431K</span>
+                            </div>
+                        </div>
+                        <div class="track-row">
+                            <div>
+                                <div class="font-bold text-white text-sm">Mon Hood</div>
+                                <div class="text-xs text-[#666] mt-0.5">Single</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bar-bg"><div class="bar-fill" style="width:61%"></div></div>
+                                <span class="bebas text-lg gold w-16 text-right">263K</span>
+                            </div>
+                        </div>
+                        <div class="track-row">
+                            <div>
+                                <div class="font-bold text-white text-sm">Je meurs les yeux ouverts</div>
+                                <div class="text-xs text-[#666] mt-0.5">Single</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bar-bg"><div class="bar-fill" style="width:45%"></div></div>
+                                <span class="bebas text-lg gold w-16 text-right">193K</span>
+                            </div>
+                        </div>
+                        <div class="track-row">
+                            <div>
+                                <div class="font-bold text-white text-sm">Quand je tombe</div>
+                                <div class="text-xs text-[#666] mt-0.5">Single</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bar-bg"><div class="bar-fill" style="width:27%"></div></div>
+                                <span class="bebas text-lg gold w-16 text-right">116K</span>
+                            </div>
+                        </div>
+                        <div class="track-row">
+                            <div>
+                                <div class="font-bold text-white text-sm">Don Corleone</div>
+                                <div class="text-xs text-[#666] mt-0.5">Album MP3</div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="bar-bg"><div class="bar-fill" style="width:20%"></div></div>
+                                <span class="bebas text-lg text-[#666] w-16 text-right">100K+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="card-dark">
+                        <h3 class="bebas text-2xl text-white mb-4 tracking-wider">Discographie 2025</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between items-center py-2 border-b border-[#2a2a2a]">
+                                <span class="text-white font-bold">MP3</span>
+                                <span class="tag text-xs">Album</span>
+                            </li>
+                            <li class="flex justify-between items-center py-2 border-b border-[#2a2a2a]">
+                                <span class="text-white font-bold">OPÉRATION PHANTOM I</span>
+                                <span class="text-[#888] text-xs uppercase tracking-wider">EP</span>
+                            </li>
+                            <li class="flex justify-between items-center py-2 border-b border-[#2a2a2a]">
+                                <span class="text-white font-bold">OPÉRATION PHANTOM II</span>
+                                <span class="text-[#888] text-xs uppercase tracking-wider">EP</span>
+                            </li>
+                            <li class="flex justify-between items-center py-2">
+                                <span class="text-white font-bold">THE SIX Chapitre 2</span>
+                                <span class="text-[#888] text-xs uppercase tracking-wider">EP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="card-dark text-center">
+                            <div class="bebas text-4xl gold">10.9K</div>
+                            <div class="text-xs text-[#666] uppercase tracking-widest mt-1">Auditeurs Mensuels</div>
+                        </div>
+                        <div class="card-dark text-center">
+                            <div class="bebas text-4xl gold">3.6K</div>
+                            <div class="text-xs text-[#666] uppercase tracking-widest mt-1">Followers Spotify</div>
+                        </div>
+                    </div>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Wemby est une collab avec La Fouine. Le prochain album doit prouver que les chiffres tiennent sans featuring de poids. Ces streams sont du capital réel à présenter aux curators.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- VISUAL WORLD -->
+        <section id="visual" class="reveal">
+            <div class="section-label">Visual World</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card col-span-1 md:col-span-2">
+                    <div class="bebas text-xl gold mb-3 tracking-wider">Cinématique Sombre</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                        L'identité visuelle de Green Money est construite sur le blueprint Freddie Gibbs : fort contraste, basse lumière, grain. Des coins de rue filmés comme des stills de cinéma. Sombre mais délibéré — pas gritty pour le gritty.
+                    </p>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Avec zéro post sur Instagram, cette esthétique n'existe que dans sa tête — pas sur écran. Un seul Reel avec le bon color grade fait plus que dix posts génériques.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="bebas text-xl gold mb-3 tracking-wider">Street Premium</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Le contraste central de sa marque : réalité de rue brute habillée en production premium. <em class="text-white not-italic">"Don Corleone"</em>, <em class="text-white not-italic">"Je meurs les yeux ouverts"</em> — un monde visuel sombre mais construit.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="bebas text-xl gold mb-3 tracking-wider">Hybride Franco-US</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Paris bitume x iconographie rap américain. Cette tension est un asset visuel. Sans marqueurs culturels dans son profil actuel, aucune des deux audiences ne peut le trouver.
+                    </p>
+                </div>
+                <div class="card col-span-1 md:col-span-2 lg:col-span-4 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="flex-1">
+                        <div class="bebas text-xl gold mb-3 tracking-wider">Identité Minimale Cryptique</div>
+                        <p class="text-sm text-[#aaa] leading-relaxed">
+                            Le <span class="gold font-bold">€</span> dans sa bio est soit un placeholder, soit un power move délibéré. La scarcité peut fonctionner si elle est soutenue par des visuels forts. Garder le minimalisme — mais ajouter une ligne de contexte : genre, ville, date de sortie. Laisser le <span class="gold">€</span> être la ponctuation, pas la phrase entière.
+                        </p>
+                    </div>
+                    <div class="card-dark flex-1">
+                        <div class="text-xs text-[#666] uppercase tracking-widest mb-3">Bio Instagram Idéale</div>
+                        <div class="font-mono text-sm text-white leading-relaxed">
+                            GREEN MONEY<br>
+                            <span class="text-[#888]">Rap / Hip-Hop — Paris</span><br>
+                            <span class="text-[#888]">Album MP3 disponible</span><br>
+                            <span class="gold">€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- VOICE -->
+        <section class="reveal">
+            <div class="section-label">Voice & Tone</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="card">
+                    <div class="bebas text-lg gold mb-2 tracking-wider">Témoignage Direct</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        Green Money ne narre pas à distance. <em class="text-white not-italic">"Je ne suis pas dans la fiction, ma musique est le reflet direct de mon vécu."</em> Déclaratif, sans hedge, ancré dans le vécu. Chaque caption doit frapper comme un bar — sujet, verbe, vérité.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="bebas text-lg gold mb-2 tracking-wider">Code-Switching Brut</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        Son style de communication naturel mélange le français de rue et le vocabulaire rap américain dans le même souffle. <em class="text-white not-italic">Hustle, banger, street</em> côtoient <em class="text-white not-italic">bitume, charbonneur, quartiers</em>. Ce n'est pas de l'affectation — c'est une génération.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="bebas text-lg gold mb-2 tracking-wider">Faim Narrative</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        Ambition, sacrifice, résilience, survie — la colonne vertébrale du catalog. La faim est convaincante quand elle est spécifique, pas quand c'est de l'énergie motivation-poster générique. Chaque caption doit nommer le sacrifice, pas juste le référencer.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="bebas text-lg gold mb-2 tracking-wider">Silence Stratégique</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        Un compte à 5 284 followers avec zéro post et une bio d'un caractère — c'est soit une crise, soit un reset calculé. Utiliser le silence comme device narratif. Quand le premier post tombe, il doit faire l'effet d'une déclaration, pas d'un rattrapage.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- INFLUENCES -->
+        <section class="reveal">
+            <div class="section-label">Influences</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="influence-card">
+                    <div class="bebas text-3xl text-white mb-1">Freddie Gibbs</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">Influence Centrale</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        Productions lourdes et organiques, grain vintage, samples soul — contrastant avec des textes sans filtre. C'est cette dualité brut/premium que Green Money transpose dans son propre univers. Le modèle direct de sa DA.
+                    </p>
+                </div>
+                <div class="influence-card">
+                    <div class="bebas text-3xl text-white mb-1">2Pac</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">Témoignage Vivant</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        La vérité du vécu comme matière première. 2Pac a posé le standard : le rap comme témoignage direct, pas comme fiction. Green Money hérite de cette approche — raconter le hustle, les trahisons, la détermination.
+                    </p>
+                </div>
+                <div class="influence-card">
+                    <div class="bebas text-3xl text-white mb-1">Mobb Deep</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">Noirceur Sonore</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        L'esthétique sombre et cinématographique du street rap. Des productions lourdes, atmosphériques, presque oppressantes — qui ont défini ce que signifie sonner "authentique" dans le rap de rue.
+                    </p>
+                </div>
+                <div class="influence-card">
+                    <div class="bebas text-3xl text-white mb-1">DMX</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">Autorité Vocale</div>
+                    <p class="text-xs text-[#aaa] leading-relaxed">
+                        L'énergie brute et l'autorité vocale. DMX n'était pas dans la nuance — chaque bar était une déclaration. Cette intensité directe, cette faim viscérale qui transperce le micro, c'est ce que Green Money vise.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-4 card-dark">
+                <div class="text-xs text-[#666] uppercase tracking-widest mb-3">Comparables Directs — Rap Français</div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="tag">Despo Rutti</span>
+                    <span class="tag">Intouchable</span>
+                    <span class="tag">Ol Kainry</span>
+                    <span class="tag">Pit Baccardi</span>
+                    <span class="tag">Jarod</span>
+                    <span class="tag">Sultan</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- FAN ARCHETYPES -->
+        <section id="fans" class="reveal">
+            <div class="section-label">Fan Archetypes</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="fan-card">
+                    <div class="fan-number">01</div>
+                    <div class="bebas text-xl text-white mb-1 tracking-wider">Vétérans du Rap FR Underground</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">25–40 ans</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                        Fans qui ont grandi avec Intouchable, Ol Kainry, Despo Rutti. Ils reconnaissent immédiatement l'ADN dans les productions de Green Money : lourd, organique, sans compromis. Ce public existe déjà — les related artists Spotify le confirment.
+                    </p>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Ces auditeurs sont fidèles mais leur base ne grandit plus vite. Ils ne suffisent pas à propulser un album en 2025. Activer des features avec des noms de ce cercle pour déclencher le bouche-à-oreille.
+                    </div>
+                </div>
+                <div class="fan-card">
+                    <div class="fan-number">02</div>
+                    <div class="bebas text-xl text-white mb-1 tracking-wider">Auditeurs US-Influenced</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">Le Pont Transatlantique</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                        Fans de Freddie Gibbs, Mobb Deep, DMX qui cherchent activement un équivalent français avec la même exigence cinématographique. Ils veulent le bitume, les samples soul, les textes sans filtre. Wemby à 431K prouve que ce public répond.
+                    </p>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Ce segment découvre Green Money par accident aujourd'hui — zéro playlist éditoriale. Pitcher les playlists "rap sombre", "rap cinématographique", "rap FR x US" sur Spotify.
+                    </div>
+                </div>
+                <div class="fan-card">
+                    <div class="fan-number">03</div>
+                    <div class="bebas text-xl text-white mb-1 tracking-wider">La Rue Parisienne</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">18–30 ans — Quartiers & Diaspora</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                        Jeunes des quartiers parisiens et de la diaspora africaine/maghrébine en France qui vivent les thèmes de l'album : hustle, loyauté, survie, ascension. Ils ne cherchent pas de fiction — ils veulent du vécu. Découverte via Instagram Reels, TikTok, bouche-à-oreille local.
+                    </p>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Avec zéro post sur Instagram et une bio réduite à "€", ce public ne peut pas trouver Green Money en ligne aujourd'hui. Réactiver Instagram immédiatement avec des Reels courts.
+                    </div>
+                </div>
+                <div class="fan-card">
+                    <div class="fan-number">04</div>
+                    <div class="bebas text-xl text-white mb-1 tracking-wider">Chasseurs de Rap Authentique</div>
+                    <div class="text-xs gold uppercase tracking-widest mb-4">20–35 ans — Anti-Mainstream</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                        Auditeurs qui rejettent activement le rap commercial et cherchent des artistes indépendants avec une vraie identité. Ils valorisent l'authenticité sur les chiffres. Découverte via blogs spécialisés, YouTube underground, recommandations algorithmiques Spotify.
+                    </p>
+                    <div class="hard-truth">
+                        <strong>Hard truth :</strong> Sans vérification Spotify, sans playlists éditoriales, et avec un profil Instagram vide, Green Money est invisible pour ce segment malgré un son qui correspond exactement à ce qu'ils cherchent.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- GROWTH OPPORTUNITIES -->
+        <section id="growth" class="reveal">
+            <div class="section-label">Growth Opportunities</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Instagram Mort-Né</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">URGENCE #1</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        5 284 followers, zéro post. Le compte existe, l'audience est là — mais elle reçoit rien. Avec un album qui arrive, chaque semaine sans post est une semaine de momentum perdu.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Minimum 3 Reels par semaine — snippets studio, visuals sombres, lifestyle brut — pour réveiller ces followers avant le drop.</p>
+                    </div>
+                </div>
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Bio : Zéro Signal</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">10 MINUTES DE TRAVAIL</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Un seul signe euro dans la bio — pas de nom, pas de genre, pas de lien Spotify, pas de pre-save. Un visiteur qui découvre le profil repart les mains vides.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Réécrire la bio avec le nom, "rap / hip-hop / Paris", et un lien direct vers Spotify ou une landing page pre-save.</p>
+                    </div>
+                </div>
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Zéro Playlist</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">CATALOGUE INVISIBLE</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Aucun placement éditorial tracké. Pourtant Wemby tourne à 431K — la preuve que le son peut percer. Le reste du catalogue stagne sans visibilité algorithmique.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Soumettre les tracks les plus fortes via Spotify for Artists. Cibler les playlists "rap sombre", "rap cinématographique", "rap FR x US".</p>
+                    </div>
+                </div>
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Collaboration Unique</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">DÉPENDANCE AU FEATURE</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Wemby avec La Fouine représente le pic absolu à 431K — soit 64% de plus que le deuxième titre. Une seule collab notable, c'est une base fragile.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Identifier 2–3 features stratégiques dans l'écosystème underground FR : Jarod, Sultan, Despo Rutti.</p>
+                    </div>
+                </div>
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Spotify Non Vérifié</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">PROFIL SANS ARMURE</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Pas de vérification, aucune bio sur la plateforme. Avec un album qui sort, c'est la première chose qu'un curateur ou journaliste va voir.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Réclamer la vérification via Spotify for Artists, uploader la bio, ajouter un Artist Pick pointant vers le single de lancement.</p>
+                    </div>
+                </div>
+                <div class="opportunity-block">
+                    <div class="bebas text-xl text-white mb-2 tracking-wider">Blogs & Presse</div>
+                    <div class="text-xs text-[#888] uppercase tracking-widest mb-4">VISIBILITÉ ÉDITORIALE</div>
+                    <p class="text-sm text-[#aaa] leading-relaxed">
+                        Le son est là. L'identité artistique est définie. Mais sans couverture presse ou blog, le segment "chasseurs de rap authentique" ne peut pas le trouver.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-[#2a2a2a]">
+                        <div class="text-xs gold uppercase tracking-widest mb-2">Action</div>
+                        <p class="text-xs text-[#888]">Soumettre l'album aux blogs rap FR indépendants et aux curators Spotify underground dès maintenant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- BOTTOM LINE -->
+        <section class="reveal">
+            <div class="section-label">Bottom Line</div>
+            <div class="bottom-line p-8 md:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div>
+                        <div class="bebas text-2xl gold mb-4 tracking-wider">What Is Happening</div>
+                        <p class="text-sm text-[#aaa] leading-relaxed">
+                            Green Money tourne à 10 963 auditeurs mensuels, un catalog qui prouve le vécu — 431K streams sur Wemby, sept autres titres au-dessus de 100K — et un album qui arrive. Le son est là. L'identité artistique est définie : brut, cinématographique, Freddie Gibbs à la française. Mais le profil Instagram est mort : 5 284 followers, zéro post, une bio réduite à "€" — à quelques semaines du drop le plus important de sa carrière.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="bebas text-2xl gold mb-4 tracking-wider">Biggest Opportunity</div>
+                        <p class="text-sm text-[#aaa] leading-relaxed">
+                            Les 5 284 followers Instagram sont une rampe de lancement dormante. Réactiver le compte maintenant — snippets, visuals sombres, rue filmée comme du cinéma — peut convertir cette base en auditeurs actifs avant le drop et déclencher l'algorithme au moment exact où l'album sort. C'est la différence entre un drop dans le vide et un drop avec du momentum derrière.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="bebas text-2xl gold mb-4 tracking-wider">Most Urgent Fix</div>
+                        <p class="text-sm text-[#aaa] leading-relaxed mb-4">
+                            Le profil Instagram doit être réactivé aujourd'hui — pas demain. Zéro post, zéro lien Spotify, zéro signal genre ou ville : un visiteur qui découvre Green Money en ce moment repart les mains vides. Réécrire la bio, ajouter le lien pre-save, poster le premier Reel cette semaine.
+                        </p>
+                        <div class="text-xs text-[#666] uppercase tracking-widest">
+                            Chaque jour de silence avant le drop est du momentum brûlé.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- CONTACT -->
+        <section id="contact" class="reveal pb-24">
+            <div class="section-label">Contact & Booking</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <div class="bebas text-3xl text-white mb-6 tracking-wider">Management</div>
+                    <div class="space-y-4 text-sm text-[#aaa]">
+                        <div class="flex gap-4 items-start py-3 border-b border-[#2a2a2a]">
+                            <span class="gold font-bold uppercase tracking-widest text-xs w-20 flex-shrink-0 mt-0.5">Booking</span>
+                            <span class="text-white">Contact management pour toute demande de booking, featuring ou partenariat.</span>
+                        </div>
+                        <div class="flex gap-4 items-start py-3 border-b border-[#2a2a2a]">
+                            <span class="gold font-bold uppercase tracking-widest text-xs w-20 flex-shrink-0 mt-0.5">Presse</span>
+                            <span class="text-white">Demandes d'interview, chroniques, couverture album disponibles sur demande.</span>
+                        </div>
+                        <div class="flex gap-4 items-start py-3">
+                            <span class="gold font-bold uppercase tracking-widest text-xs w-20 flex-shrink-0 mt-0.5">Sync</span>
+                            <span class="text-white">Catalogue disponible pour synchronisation — film, série, publicité.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-dark flex flex-col justify-between">
+                    <div>
+                        <div class="bebas text-3xl text-white mb-6 tracking-wider">Liens</div>
+                        <div class="space-y-3">
+                            <a href="#" class="flex justify-between items-center py-3 border-b border-[#2a2a2a] hover:border-[#c9a84c] transition-colors group">
+                                <span class="text-sm font-bold text-white group-hover:text-[#c9a84c] transition-colors">Spotify</span>
+                                <span class="text-xs text-[#666] group-hover:text-[#c9a84c] transition-colors">open.spotify.com →</span>
+                            </a>
+                            <a href="#" class="flex justify-between items-center py-3 border-b border-[#2a2a2a] hover:border-[#c9a84c] transition-colors group">
+                                <span class="text-sm font-bold text-white group-hover:text-[#c9a84c] transition-colors">Instagram</span>
+                                <span class="text-xs text-[#666] group-hover:text-[#c9a84c] transition-colors">@greenmoney →</span>
+                            </a>
+                            <a href="#" class="flex justify-between items-center py-3 hover:border-[#c9a84c] transition-colors group">
+                                <span class="text-sm font-bold text-white group-hover:text-[#c9a84c] transition-colors">YouTube</span>
+                                <span class="text-xs text-[#666] group-hover:text-[#c9a84c] transition-colors">youtube.com →</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-[#2a2a2a]">
+                        <div class="bebas text-6xl gold leading-none">€</div>
+                        <div class="text-xs text-[#444] uppercase tracking-widest mt-2">Indépendant — 2025</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-[#1a1a1a] py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="bebas text-2xl gold tracking-widest">GREEN MONEY</span>
+            <span class="text-xs text-[#444] uppercase tracking-widest">Press Kit — 2025 — Confidentiel</span>
+            <div class="flex gap-4">
+                <span class="tag text-xs">RAP</span>
+                <span class="tag text-xs">PARIS</span>
+                <span class="tag text-xs">INDÉPENDANT</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
