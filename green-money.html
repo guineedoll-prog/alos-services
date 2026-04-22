@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN MONEY — Artist Document 2025</title>
+    <meta name="description" content="Green Money — Rap FR authentique, esthétique cinématographique sombre. Artist document officiel 2025." />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+        :root {
+            --black: #0a0a0a;
+            --dark: #111111;
+            --dark2: #1a1a1a;
+            --dark3: #222222;
+            --green: #1db954;
+            --green-dim: #14a045;
+            --green-dark: #0d6b32;
+            --gold: #c9a84c;
+            --white: #f5f5f5;
+            --grey: #888888;
+            --grey-light: #bbbbbb;
+            --red: #cc2222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            position: relative;
+            padding: 80px 8vw 100px;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 40%, #111 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 80% 30%, rgba(29,185,84,0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 60% at 20% 80%, rgba(29,185,84,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            color: var(--green);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        .hero-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(80px, 18vw, 220px);
+            line-height: 0.88;
+            color: var(--white);
+            letter-spacing: -0.01em;
+            position: relative;
+        }
+
+        .hero-name span {
+            color: var(--green);
+        }
+
+        .hero-tagline {
+            margin-top: 40px;
+            font-size: clamp(14px, 2vw, 18px);
+            font-weight: 300;
+            color: var(--grey-light);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 42px;
+            color: var(--green);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--grey);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .hero-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--green), transparent);
+            opacity: 0.3;
+        }
+
+        /* ── SECTION BASE ── */
+        section {
+            padding: 100px 8vw;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: var(--dark);
+        }
+
+        .section-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.35em;
+            color: var(--green);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .section-label::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 60px;
+            background: var(--green);
+            opacity: 0.5;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 7vw, 80px);
+            line-height: 0.92;
+            color: var(--white);
+            margin-bottom: 50px;
+        }
+
+        /* ── BIO ── */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .bio-text {
+            font-size: 17px;
+            line-height: 1.85;
+            color: var(--grey-light);
+            font-weight: 300;
+        }
+
+        .bio-text strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .bio-text p + p {
+            margin-top: 24px;
+        }
+
+        .bio-quote {
+            border-left: 3px solid var(--green);
+            padding: 24px 0 24px 32px;
+            font-size: clamp(18px, 2.5vw, 24px);
+            font-weight: 300;
+            line-height: 1.6;
+            color: var(--white);
+            font-style: italic;
+        }
+
+        .bio-quote cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 12px;
+            font-style: normal;
+            color: var(--green);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        /* ── CORE THEMES ── */
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2px;
+        }
+
+        .theme-card {
+            background: var(--dark2);
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--green);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .theme-card:hover {
+            background: var(--dark3);
+        }
+
+        .theme-card:hover::before {
+            opacity: 1;
+        }
+
+        .theme-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 64px;
+            color: var(--green);
+            opacity: 0.12;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .theme-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 16px;
+        }
+
+        .theme-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--grey);
+        }
+
+        /* ── CATALOGUE / TRACKS ── */
+        .tracks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .track-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px;
+            background: var(--dark2);
+            gap: 20px;
+            transition: background 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .track-row::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, var(--green), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .track-row:hover {
+            background: var(--dark3);
+        }
+
+        .track-row:hover::after {
+            opacity: 0.3;
+        }
+
+        .track-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex: 1;
+        }
+
+        .track-index {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--grey);
+            min-width: 28px;
+        }
+
+        .track-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .track-feat {
+            font-size: 12px;
+            color: var(--green);
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+        .track-streams {
+            font-family: 'Space Mono', monospace;
+            font-size: 14px;
+            color: var(--green);
+            font-weight: 700;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .track-bar-wrap {
+            width: 120px;
+            height: 3px;
+            background: var(--dark3);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .track-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--green-dark), var(--green));
+            border-radius: 2px;
+        }
+
+        /* ── VISUAL WORLD ── */
+        .visual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .visual-block {
+            padding: 40px;
+            background: var(--dark2);
+            border-top: 1px solid rgba(29,185,84,0.2);
+        }
+
+        .visual-block-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 16px;
+            letter-spacing: 0.03em;
+        }
+
+        .visual-block-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--grey);
+        }
+
+        .visual-block-text strong {
+            color: var(--white);
+        }
+
+        /* ── HARD TRUTH BOXES ── */
+        .hard-truth {
+            background: rgba(204,34,34,0.08);
+            border: 1px solid rgba(204,34,34,0.25);
+            border-left: 3px solid var(--red);
+            padding: 20px 24px;
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+
+        .hard-truth-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--red);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .hard-truth p {
+            font-size: 13px;
+            line-height: 1.65;
+            color: #e07070;
+        }
+
+        .opportunity {
+            background: rgba(29,185,84,0.07);
+            border: 1px solid rgba(29,185,84,0.2);
+            border-left: 3px solid var(--green);
+            padding: 20px 24px;
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .opportunity-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            color: var(--green);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .opportunity p {
+            font-size: 13px;
+            line-height: 1.65;
+            color: var(--grey-light);
+        }
+
+        /* ── FAN ARCHETYPES ── */
+        .fan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .fan-card {
+            background: var(--dark2);
+            padding: 40px 36px;
+        }
+
+        .fan-age {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--green);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .fan-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 30px;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .fan-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--grey);
+        }
+
+        /* ── INFLUENCES ── */
+        .influences-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+        }
+
+        .influence-card {
+            background: var(--dark2);
+            padding: 40px 28px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .influence-card:hover {
+            background: var(--dark3);
+        }
+
+        .influence-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-dark), var(--dark3));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: var(--green);
+        }
+
+        .influence-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 26px;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .influence-text {
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--grey);
+        }
+
+        /* ── GROWTH OPPs ── */
+        .growth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .growth-card {
+            padding: 36px;
+            background: var(--dark2);
+            position: relative;
+        }
+
+        .growth-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--red);
+            background: rgba(204,34,34,0.1);
+            border: 1px solid rgba(204,34,34,0.25);
+            padding: 6px 14px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        .growth-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 14px;
+        }
+
+        .growth-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--grey);
+        }
+
+        .growth-action {
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.65;
+            color: var(--green);
+            font-weight: 500;
+        }
+
+        .growth-action::before {
+            content: '→ ';
+        }
+
+        /* ── BOTTOM LINE ── */
+        .bottom-line {
+            background: var(--dark);
+            padding: 100px 8vw;
+        }
+
+        .bl-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .bl-card {
+            background: var(--dark2);
+            padding: 48px 40px;
+        }
+
+        .bl-card.featured {
+            background: linear-gradient(135deg, rgba(29,185,84,0.12), rgba(29,185,84,0.04));
+            border-top: 2px solid var(--green);
+        }
+
+        .bl-card-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--grey);
+            margin-bottom: 20px;
+        }
+
+        .bl-card.featured .bl-card-label {
+            color: var(--green);
+        }
+
+        .bl-card-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 32px;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .bl-card-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--grey);
+        }
+
+        /* ── VOICE ── */
+        .voice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2px;
+        }
+
+        .voice-card {
+            background: var(--dark2);
+            padding: 36px;
+        }
+
+        .voice-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .voice-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 26px;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .voice-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--grey);
+        }
+
+        /* ── WHAT'S WORKING ── */
+        .working-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .working-card {
+            background: var(--dark2);
+            padding: 40px 36px;
+        }
+
+        .working-card-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 14px;
+        }
+
+        .working-card-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .working-card-text {
+            font-size: 14px;
+            line-height: 1.75;
+            color: var(--grey);
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            padding: 60px 8vw 40px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: var(--white);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-name span {
+            color: var(--green);
+        }
+
+        .footer-note {
+            font-size: 12px;
+            color: var(--grey);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--green);
+            letter-spacing: 0.15em;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(29,185,84,0.3), transparent);
+            margin: 0 8vw;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .bio-grid,
+            .visual-grid,
+            .fan-grid,
+            .growth-grid,
+            .bl-grid,
+            .working-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .influences-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero-stats {
+                gap: 36px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 70px 6vw;
+            }
+
+            .hero {
+                padding: 60px 6vw 80px;
+            }
+
+            .influences-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 50px 6vw 36px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .track-bar-wrap {
+                display: none;
+            }
+        }
+
+        /* ── SCROLLBAR ── */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--green-dark);
+            border-radius: 2px;
+        }
+
+        /* ── SELECTION ── */
+        ::selection {
+            background: rgba(29,185,84,0.3);
+            color: var(--white);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-eyebrow">Artist Document — 2025</div>
+    <h1 class="hero-name">GREEN<br><span>MONEY</span></h1>
+    <p class="hero-tagline">Rap FR authentique — esthétique cinématographique sombre — Freddie Gibbs à la française</p>
+    <div class="hero-stats">
+        <div class="stat">
+            <div class="stat-number">431K</div>
+            <div class="stat-label">Streams — Wemby</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">10,963</div>
+            <div class="stat-label">Monthly Listeners</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Projets en 2025</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Indépendant</div>
+        </div>
+    </div>
+    <div class="hero-line"></div>
+</section>
+
+<!-- ════════════════════════════════════════
+     BIO
+════════════════════════════════════════ -->
+<section id="bio">
+    <div class="section-label">01 — Artist Bio</div>
+    <h2 class="section-title">L'ADN</h2>
+    <div class="bio-grid">
+        <div class="bio-text">
+            <p>
+                <strong>Green Money</strong> est un artiste profondément ancré dans la pure culture hip-hop. Son ADN musical fait naturellement le pont entre <strong>l'authenticité du rap français underground</strong> et l'énergie brute du rap américain.
+            </p>
+            <p>
+                Son style est direct, brut, et fortement imprégné du <em>street lifestyle</em> et de l'esthétique US. Ce qui drive sa musique, c'est la <strong>vérité du bitume</strong> : raconter le hustle, l'ambition, les trahisons, mais surtout la détermination pour s'en sortir.
+            </p>
+            <p>
+                Il ne s'agit pas de fiction. Sa musique est le <strong>reflet direct de son vécu</strong>. Sa direction artistique s'inspire d'artistes comme <strong>Freddie Gibbs</strong> : une approche où la réalité crue de la rue rencontre une exigence musicale forte, un univers à la fois sombre, authentique et presque cinématographique.
+            </p>
+            <p>
+                Son but en studio est simple : retranscrire cette <strong>faim de réussir</strong> avec une esthétique pointue pour que son public s'y reconnaisse pleinement.
+            </p>
+        </div>
+        <div>
+            <div class="bio-quote">
+                « Je ne suis pas dans la fiction. Ma musique est le reflet direct de mon vécu. »
+                <cite>— Green Money</cite>
+            </div>
+
+            <div class="bio-quote" style="margin-top: 24px; border-left-color: var(--gold);">
+                « L'objectif en studio : retranscrire la faim de réussir avec une esthétique pointue, pour que le public s'y reconnaisse. »
+                <cite style="color: var(--gold);">— Green Money</cite>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════
+     CORE THEMES
+════════════════════════════════════════ -->
+<section id="themes">
+    <div class="section-label">02 — Core Themes</div>
+    <h2 class="section-title">Ce Qui Drive<br>La Musique</h2>
+    <div class="themes-grid">
+        <div class="theme-card">
+            <div class="theme-number">01</div>
+            <div class="theme-title">Vérité du Bitume — Sans Filtre</div>
+            <div class="theme-text">
+                Green Money ancre chaque track dans le vécu réel — hustle, trahisons, survie — avec une conviction testimoniale qui refuse la fiction. Reflétée dans des titres comme <em>'Je meurs les yeux ouverts'</em> (193K streams) et <em>'Mon Hood'</em> (263K streams).
+            </div>
+        </div>
+        <div class="theme-card">
+            <div class="theme-number">02</div>
+            <div class="theme-title">Pont Franco-Américain — Esthétique Cinématographique</div>
+            <div class="theme-text">
+                L'ADN fusionne la brutalité du rap français underground (Despo Rutti, Intouchable comme comparables directs) avec l'exigence premium à la Freddie Gibbs : productions lourdes, grain vintage, soul sombre, textes sans filtre.
+            </div>
+        </div>
+        <div class="theme-card">
+            <div class="theme-number">03</div>
+            <div class="theme-title">Faim de Réussir — Indépendant et Actif</div>
+            <div class="theme-text">
+                10 963 auditeurs mensuels. Un album (MP3, 2025), deux EPs et un single sortis la même année. Green Money tourne en mode charbonneur pur — aucun label, cadence de sorties soutenue, et un top track à 431K streams construit sur une collab La Fouine.
+            </div>
+        </div>
+        <div class="theme-card">
+            <div class="theme-number">04</div>
+            <div class="theme-title">Présence Digitale à Reconstruire</div>
+            <div class="theme-text">
+                5 284 followers Instagram, zéro post, bio réduite à '€' — le profil est dormant à quelques semaines d'une sortie album. C'est la menace directe la plus urgente sur l'impact du projet.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CATALOGUE
+════════════════════════════════════════ -->
+<section id="catalogue">
+    <div class="section-label">03 — Catalogue</div>
+    <h2 class="section-title">Le Catalogue<br>Tient la Route</h2>
+    <div class="tracks-list">
+        <div class="track-row">
+            <div class="track-left">
+                <div class="track-index">01</div>
+                <div>
+                    <div class="track-name">Wemby</div>
+                    <div class="track-feat">feat. La Fouine</div>
+                </div>
+            </div>
+            <div class="track-bar-wrap">
+                <div class="track-bar" style="width: 100%;"></div>
+            </div>
+            <div class="track-streams">431 200</div>
+        </div>
+        <div class="track-row">
+            <div class="track-left">
+                <div class="track-index">02</div>
+                <div>
+                    <div class="track-name">Mon Hood</div>
+                </div>
+            </div>
+            <div class="track-bar-wrap">
+                <div class="track-bar" style="width: 61%;"></div>
+            </div>
+            <div class="track-streams">263 000</div>
+        </div>
+        <div class="track-row">
+            <div class="track-left">
+                <div class="track-index">03</div>
+                <div>
+                    <div class="track-name">Je meurs les yeux ouverts</div>
+                </div>
+            </div>
+            <div class="track-bar-wrap">
+                <div class="track-bar" style="width: 45%;"></div>
+            </div>
+            <div class="track-streams">193 000</div>
+        </div>
+        <div class="track-row">
+            <div class="track-left">
+                <div class="track-index">04</div>
+                <div>
+                    <div class="track-name">Quand je tombe</div>
+                </div>
+            </div>
+            <div class="track-bar-wrap">
+                <div class="track-bar" style="width: 27%;"></div>
+            </div>
+            <div class="track-streams">116 000</div>
+        </div>
+        <div class="track-row" style="opacity: 0.6;">
+            <div class="track-left">
+                <div class="track-index">—</div>
+                <div>
+                    <div class="track-name">Don Corleone + autres titres</div>
+                    <div class="track-feat">+7 titres au-dessus de 100K</div>
+                </div>
+            </div>
+            <div class="track-bar-wrap">
+                <div class="track-bar" style="width: 20%;"></div>
+            </div>
+            <div class="track-streams">100K+</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+        <div class="hard-truth">
+            <div class="hard-truth-label">Hard Truth</div>
+            <p>'Wemby' est une collab avec La Fouine — le prochain album doit prouver que les chiffres tiennent sans featuring de poids. Une seule collab notable dans le catalogue, c'est une base fragile.</p>
+        </div>
+        <div class="opportunity">
+            <div class="opportunity-label">L'Opportunité</div>
+            <p>Ces streams sont du capital réel à présenter aux curators et aux labels. Identifier deux ou trois features stratégiques (Jarod, Sultan, Despo Rutti) pour dupliquer cet effet sur le nouvel album.</p>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════
+     VISUAL WORLD
+════════════════════════════════════════ -->
+<section id="visual">
+    <div class="section-label">04 — Visual World</div>
+    <h2 class="section-title">L'Identité<br>Visuelle</h2>
+    <div class="visual-grid">
+        <div>
+            <div class="visual-block">
+                <div class="visual-block-title">Cinématique Sombre</div>
+                <div class="visual-block-text">
+                    L'identité visuelle de Green Money est construite sur le blueprint Freddie Gibbs : <strong>fort contraste, lumière basse, grain</strong>. Des coins de rue filmés comme des stills de film noir. <br><br>
+                    La hard truth : avec zéro post sur Instagram aujourd'hui, cette esthétique n'existe que dans sa tête — pas à l'écran. Un Reel fort avec le bon color grade fait plus que dix posts génériques.
+                </div>
+            </div>
+            <div class="visual-block" style="margin-top: 2px;">
+                <div class="visual-block-title">Street Premium</div>
+                <div class="visual-block-text">
+                    Le contraste central de sa marque : <strong>réalité de rue brute habillée en production premium</strong>. Des titres comme 'Don Corleone' et 'Je meurs les yeux ouverts' signalent un univers visuel sombre mais délibéré — pas du gritty pour le gritty. <br><br>
+                    L'opportunité : traduire l'esthétique soul-sample, grain vintage sonore en traitement photo et vidéo avant la sortie de l'album.
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="visual-block">
+                <div class="visual-block-title">Hybride Franco-Américain</div>
+                <div class="visual-block-text">
+                    Green Money se situe entre deux mondes : <strong>Paris bitume et US street culture</strong>. Ses influences (2Pac, DMX, Mobb Deep, Freddie Gibbs) tirent le langage visuel vers l'iconographie du rap américain, tandis que ses lyrics et son vécu sont enracinés dans les quartiers français. <br><br>
+                    Cette tension est un <strong>asset visuel</strong>. Le fix : rendre cette dualité visible — les rues de Paris filmées avec le poids cinématographique américain.
+                </div>
+            </div>
+            <div class="visual-block" style="margin-top: 2px;">
+                <div class="visual-block-title">Identité Minimale Cryptique</div>
+                <div class="visual-block-text">
+                    Le seul '€' dans la bio peut fonctionner si il est soutenu par des visuels forts. En ce moment, il ne communique rien à un visiteur nouveau. <br><br>
+                    <strong>L'opportunité :</strong> garder le minimalisme mais ajouter une ligne de contexte — genre, ville, date de sortie. Laisser le '€' être la ponctuation, pas toute la phrase.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     VOICE
+════════════════════════════════════════ -->
+<section id="voice">
+    <div class="section-label">05 — Voice</div>
+    <h2 class="section-title">La Voix</h2>
+    <div class="voice-grid">
+        <div class="voice-card">
+            <div class="voice-icon">🎙️</div>
+            <div class="voice-title">Témoignage Direct</div>
+            <div class="voice-text">
+                Green Money ne narre pas à distance. « Je ne suis pas dans la fiction, ma musique est le reflet direct de mon vécu. » C'est la voix — déclarative, sans hedging, ancrée dans le vécu. Chaque caption doit frapper comme un bar : sujet, verbe, vérité. Zéro qualificatif.
+            </div>
+            <div class="hard-truth" style="margin-top: 16px;">
+                <div class="hard-truth-label">Hard Truth</div>
+                <p>Avec zéro caption live sur Instagram, cette voix n'a aucun débouché public pour l'instant.</p>
+            </div>
+        </div>
+        <div class="voice-card">
+            <div class="voice-icon">🌍</div>
+            <div class="voice-title">Code-Switching Brut</div>
+            <div class="voice-text">
+                Sa communication naturelle passe entre le français de rue et le vocabulaire rap américain dans le même souffle. 'Hustle', 'street lifestyle', 'banger' côtoient 'bitume', 'charbonneur', 'quartiers'. Ce n'est pas de l'affectation — c'est une génération de rappeurs français façonnés autant par Booba que par Freddie Gibbs.
+            </div>
+            <div class="opportunity" style="margin-top: 16px;">
+                <div class="opportunity-label">L'Opportunité</div>
+                <p>Construire ce pattern de voix hybride avant l'album pour que l'audience sache à quoi s'attendre.</p>
+            </div>
+        </div>
+        <div class="voice-card">
+            <div class="voice-icon">🔥</div>
+            <div class="voice-title">Faim Narrative</div>
+            <div class="voice-text">
+                Ambition, sacrifice, résilience, survie — ce ne sont pas des concepts abstraits pour Green Money. 'Wemby' à 431K, 'Mon Hood' à 263K, 'Je meurs les yeux ouverts' à 193K — l'audience répond le plus aux tracks qui portent ce poids. La faim est convaincante quand elle est spécifique, pas générique.
+            </div>
+        </div>
+        <div class="voice-card">
+            <div class="voice-icon">🤫</div>
+            <div class="voice-title">Silence Stratégique</div>
+            <div class="voice-text">
+                Un compte de 5 284 followers avec zéro post et une bio d'un caractère est soit une crise, soit un reset calculé. Étant donné la cadence de sorties 2025 (deux EPs, un album, un single), ça ressemble à une remise à zéro délibérée avant un relaunch. Ce silence peut construire de l'anticipation s'il est activé correctement.
+            </div>
+            <div class="opportunity" style="margin-top: 16px;">
+                <div class="opportunity-label">L'Opportunité</div>
+                <p>Quand le premier post drop, il doit faire l'effet d'une déclaration — pas d'un rattrapage. Un visuel fort, une ligne de caption brute. Reset sur ses termes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════
+     FAN ARCHETYPES
+════════════════════════════════════════ -->
+<section id="fans">
+    <div class="section-label">06 — Fan Archetypes</div>
+    <h2 class="section-title">L'Audience</h2>
+    <div class="fan-grid">
+        <div class="fan-card">
+            <div class="fan-age">25–40 ans</div>
+            <div class="fan-title">Vétérans du Rap Français Underground</div>
+            <div class="fan-text">
+                Fans qui ont grandi avec Intouchable, Ol Kainry et Despo Rutti — le noyau dur du rap de rue français. Ils reconnaissent immédiatement l'ADN dans les productions de Green Money : lourd, organique, sans compromis. Ce public existe déjà, confirmé par les related artists Spotify.
+            </div>
+            <div class="hard-truth">
+                <div class="hard-truth-label">Hard Truth</div>
+                <p>Ces auditeurs sont fidèles mais leur base ne grandit plus vite — ils ne suffisent pas à propulser un album en 2025.</p>
+            </div>
+        </div>
+        <div class="fan-card">
+            <div class="fan-age">20–35 ans</div>
+            <div class="fan-title">Auditeurs US-Influenced — Le Pont Transatlantique</div>
+            <div class="fan-text">
+                Fans du rap américain (Freddie Gibbs, Mobb Deep, DMX) qui cherchent activement un équivalent français avec la même exigence cinématographique. Ils veulent le bitume, les samples soul, les textes sans filtre. 'Wemby' à 431K prouve que ce public répond quand le son est premium.
+            </div>
+            <div class="hard-truth">
+                <div class="hard-truth-label">Hard Truth</div>
+                <p>Ce segment découvre Green Money par accident aujourd'hui — zéro playlist éditoriale, zéro présence algorithmique documentée.</p>
+            </div>
+        </div>
+        <div class="fan-card">
+            <div class="fan-age">18–30 ans</div>
+            <div class="fan-title">La Rue Parisienne — Quartiers et Diaspora</div>
+            <div class="fan-text">
+                Jeunes des quartiers parisiens et de la diaspora africaine/maghrébine en France qui vivent les thèmes de l'album : hustle, loyauté, survie, ascension. Ils ne cherchent pas de fiction — ils veulent du vécu. Ils découvrent via Instagram Reels, TikTok et le bouche-à-oreille local.
+            </div>
+            <div class="hard-truth">
+                <div class="hard-truth-label">Hard Truth</div>
+                <p>Avec zéro post sur Instagram et une bio réduite à '€', ce public ne peut pas trouver Green Money en ligne aujourd'hui.</p>
+            </div>
+        </div>
+        <div class="fan-card">
+            <div class="fan-age">20–35 ans</div>
+            <div class="fan-title">Chasseurs de Rap Authentique — Anti-Mainstream</div>
+            <div class="fan-text">
+                Auditeurs qui rejettent activement le rap commercial et cherchent des artistes indépendants avec une vraie identité. Ils valorisent l'authenticité sur les chiffres, le vécu sur le marketing. Découverte via blogs spécialisés, YouTube underground, recommandations algorithmiques Spotify.
+            </div>
+            <div class="opportunity">
+                <div class="opportunity-label">L'Opportunité</div>
+                <p>Soumettre l'album aux blogs rap FR indépendants et aux curators Spotify underground — le son est là, la visibilité pas encore.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     INFLUENCES
+════════════════════════════════════════ -->
+<section id="influences">
+    <div class="section-label">07 — Influences</div>
+    <h2 class="section-title">Les Références</h2>
+    <div class="influences-grid">
+        <div class="influence-card">
+            <div class="influence-icon">FG</div>
+            <div class="influence-name">Freddie Gibbs</div>
+            <div class="influence-text">
+                L'influence centrale. Productions lourdes et organiques, grain vintage, samples soul — en contraste avec des textes sans filtre. Cette dualité brut/premium que Green Money transpose dans son propre univers. Le modèle direct de sa DA.
+            </div>
+        </div>
+        <div class="influence-card">
+            <div class="influence-icon">2P</div>
+            <div class="influence-name">2Pac</div>
+            <div class="influence-text">
+                La vérité du vécu comme matière première. 2Pac a posé le standard : le rap comme témoignage direct, pas comme fiction. Green Money hérite de cette approche — raconter le hustle, les trahisons, la détermination — avec la conviction que c'est la rue qui parle, pas un personnage.
+            </div>
+        </div>
+        <div class="influence-card">
+            <div class="influence-icon">MD</div>
+            <div class="influence-name">Mobb Deep</div>
+            <div class="influence-text">
+                L'esthétique sombre et cinématographique du street rap. Des productions lourdes, atmosphériques, presque oppressantes — qui ont défini ce que signifie sonner 'authentique' dans le rap de rue. Cette noirceur sonore se retrouve directement dans l'ambiance que Green Money construit sur ses projets.
+            </div>
+        </div>
+        <div class="influence-card">
+            <div class="influence-icon">DX</div>
+            <div class="influence-name">DMX</div>
+            <div class="influence-text">
+                L'énergie brute et l'autorité vocale. DMX n'était pas dans la nuance — chaque bar était une déclaration. Cette intensité directe, cette faim viscérale qui transperce le micro : que l'auditeur ressente la détermination avant même de comprendre les mots.
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════
+     WHAT'S WORKING
+════════════════════════════════════════ -->
+<section id="working">
+    <div class="section-label">08 — Ce Qui Marche</div>
+    <h2 class="section-title">Les Points<br>Forts</h2>
+    <div class="working-grid">
+        <div class="working-card">
+            <div class="working-card-label">Catalogue</div>
+            <div class="working-card-title">431K Streams sur Wemby — La Faim Prouvée</div>
+            <div class="working-card-text">
+                Le top track dépasse 431 200 streams, et trois autres titres franchissent les 100K — Mon Hood (263K), Je meurs les yeux ouverts (193K), Quand je tombe (116K). Ce n'est pas de la chance, c'est un catalogue qui tient la route. Ces streams sont du capital réel à présenter aux curators et aux labels pour le push.
+            </div>
+        </div>
+        <div class="working-card">
+            <div class="working-card-label">Discipline Studio</div>
+            <div class="working-card-title">Cadence de Sortie — Le Charbonneur ne S'arrête Pas</div>
+            <div class="working-card-text">
+                En 2025 seul : un album (MP3), deux EPs (OPÉRATION PHANTOM I et II, THE SIX Chapitre 2), plus un single. Une discipline de studio rare à ce stade de carrière. L'opportunité : canaliser cette énergie sur un seul projet fort avec une vraie fenêtre promotionnelle derrière.
+            </div>
+        </div>
+        <div class="working-card">
+            <div class="working-card-label">Positionnement</div>
+            <div class="working-card-title">Freddie Gibbs à la Française — L'ADN est Défini</div>
+            <div class="working-card-text">
+                Rap de rue brut, esthétique cinématographique, productions lourdes et organiques, textes sans filtre. Pas un positionnement générique — une niche précise dans le rap français underground, confirmée par les related artists (Intouchable, Pit Baccardi, Jarod). Ce cadre est prêt à être traduit en identité visuelle cohérente.
+            </div>
+        </div>
+        <div class="working-card">
+            <div class="working-card-label">Collaboration</div>
+            <div class="working-card-title">La Fouine sur Wemby — La Preuve que les Features Marchent</div>
+            <div class="working-card-text">
+                La collab avec La Fouine est directement responsable du pic à 431K — soit presque le double du deuxième titre. C'est une démonstration concrète que Green Money peut attirer un public plus large quand il y a un pont vers une audience établie. Identifier deux ou trois features stratégiques pour amplifier l'album.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     GROWTH OPPORTUNITIES
+════════════════════════════════════════ -->
+<section id="growth">
+    <div class="section-label">09 — Growth Opportunities</div>
+    <h2 class="section-title">Les Opportunités<br>de Croissance</h2>
+    <div class="growth-grid">
+        <div class="growth-card">
+            <div class="growth-badge">⚡ Urgent</div>
+            <div class="growth-title">Instagram Mort-Né Avant l'Album</div>
+            <div class="growth-text">
+                5 284 followers, zéro post. Le compte existe, l'audience est là — mais elle ne reçoit rien. Avec l'album qui arrive, chaque semaine sans post est une semaine de momentum perdu.
+            </div>
+            <div class="growth-action">Minimum 3 Reels par semaine pour réveiller ces followers avant le drop : snippets studio, visuals sombres, lifestyle brut.</div>
+        </div>
+        <div class="growth-card">
+            <div class="growth-badge">⚡ Urgent</div>
+            <div class="growth-title">Bio Instagram : Zéro Signal, Zéro Funnel</div>
+            <div class="growth-text">
+                Un seul signe euro (€) — pas de nom, pas de genre, pas de lien Spotify, pas de pre-save. Un visiteur qui découvre le profil repart les mains vides.
+            </div>
+            <div class="growth-action">Réécrire la bio avec le nom, 'rap / hip-hop / Paris', et un lien direct vers Spotify ou une landing page pre-save. 10 minutes de travail, impact immédiat.</div>
+        </div>
+        <div class="growth-card">
+            <div class="growth-badge">📊 Priorité Haute</div>
+            <div class="growth-title">Zéro Placement Playlist — Catalogue Invisible</div>
+            <div class="growth-text">
+                Aucun placement éditorial ou playlist tracké. Pourtant 'Wemby' tourne à 431 200 streams — la preuve que le son peut percer.
+            </div>
+            <div class="growth-action">Soumettre les tracks les plus fortes via Spotify for Artists avant la sortie album. Cibler les playlists 'rap sombre', 'rap cinématographique', 'rap FR x US'.</div>
+        </div>
+        <div class="growth-card">
+            <div class="growth-badge">🤝 Stratégique</div>
+            <div class="growth-title">Collaboration Unique — Dépendance au Feature</div>
+            <div class="growth-text">
+                'Wemby' avec La Fouine représente le pic absolu à 431K — soit 64% de plus que le deuxième titre. Le reste tourne en solo entre 100K et 260K.
+            </div>
+            <div class="growth-action">Multiplier les collaborations avec des artistes du même écosystème underground (Despo Rutti, Ol Kainry, Pit Baccardi) pour dupliquer cet effet sur le nouvel album.</div>
+        </div>
+        <div class="growth-card">
+            <div class="growth-badge">✅ Quick Win</div>
+            <div class="growth-title">Spotify Non Vérifié — Profil Sans Armure</div>
+            <div class="growth-text">
+                Le compte Spotify n'est pas vérifié et aucune bio n'est renseignée. C'est la première chose qu'un curateur ou journaliste va voir avec l'album qui sort.
+            </div>
+            <div class="growth-action">Réclamer la vérification via Spotify for Artists, uploader la bio, ajouter un Artist Pick pointant vers le single de lancement.</div>
+        </div>
+        <div class="growth-card">
+            <div class="growth-badge">💤 À Activer</div>
+            <div class="growth-title">Base de Followers Dormante — 5 284 Instagram + 3 627 Spotify</div>
+            <div class="growth-text">
+                Avec zéro post actif, Green Money maintient 5 284 followers Instagram et 3 627 followers Spotify — cette audience a été construite sur du vécu réel, pas sur du bruit algorithmique. Le ratio followers/following de 13.62:1 confirme un historique actif.
+            </div>
+            <div class="growth-action">Réactiver ce public maintenant avec du contenu brut et cinématographique — il y a une rampe de lancement déjà en place pour le drop.</div>
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════════════════════════════════
+     BOTTOM LINE
+════════════════════════════════════════ -->
+<section id="bottom-line" class="bottom-line">
+    <div class="section-label">10 — Bottom Line</div>
+    <h2 class="section-title">L'Essentiel</h2>
+    <div class="bl-grid">
+        <div class="bl-card">
+            <div class="bl-card-label">Où on en est</div>
+            <div class="bl-card-title">Ce Qui Se Passe</div>
+            <div class="bl-card-text">
+                Green Money tourne à 10 963 auditeurs mensuels, un catalogue qui prouve le vécu — 431K streams sur 'Wemby', sept autres titres au-dessus de 100K — et un album qui arrive. Le son est là. L'identité artistique est définie : brut, cinématographique, Freddie Gibbs à la française. <br><br>
+                Mais le profil Instagram est mort : 5 284 followers, zéro post, une bio réduite à '€' — à quelques semaines du drop le plus important de sa carrière.
+            </div>
+        </div>
+        <div class="bl-card featured">
+            <div class="bl-card-label">La Plus Grande Opportunité</div>
+            <div class="bl-card-title">Réveiller la Rampe de Lancement</div>
+            <div class="bl-card-text">
+                Les 5 284 followers Instagram sont une rampe de lancement dormante. Réactiver le compte maintenant — snippets, visuals sombres, rue filmée comme du cinéma — peut convertir cette base en auditeurs actifs et déclencher l'algorithme au moment exact où l'album sort. <br><br>
+                C'est la différence entre un drop dans le vide et un drop avec du momentum derrière.
+            </div>
+        </div>
+        <div class="bl-card">
+            <div class="bl-card-label">Le Fix le Plus Urgent</div>
+            <div class="bl-card-title">Réactiver Instagram — Aujourd'hui</div>
+            <div class="bl-card-text">
+                Zéro post, zéro lien Spotify, zéro signal genre ou ville : un visiteur qui découvre Green Money en ce moment repart les mains vides. <br><br>
+                Réécrire la bio. Ajouter le lien pre-save. Poster le premier Reel cette semaine. <br><br>
+                <strong style="color: var(--green);">Chaque jour de silence avant l'album est du momentum brûlé.</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer>
+    <div class="footer-name">GREEN <span>MONEY</span></div>
+    <div class="footer-note">Artist Document — 2025 — Confidentiel</div>
+    <div class="footer-tag">RAP FR / HIP-HOP / PARIS</div>
+</footer>
+
+</body>
+</html>
