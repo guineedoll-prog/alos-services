@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN MONEY — Rap / Hip-Hop / Paris</title>
+    <meta name="description" content="Green Money — artiste rap indépendant. Brut, cinématographique, sans filtre. Album MP3 disponible. Paris bitume, énergie US." />
+    <meta property="og:title" content="GREEN MONEY — Rap / Hip-Hop / Paris" />
+    <meta property="og:description" content="Brut. Cinématographique. Sans filtre. Album MP3 disponible maintenant." />
+    <meta property="og:type" content="website" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #c9a84c;
+            --gold-light: #e8c97a;
+            --dark: #0a0a0a;
+            --dark-2: #111111;
+            --dark-3: #1a1a1a;
+            --gray: #888888;
+            --light: #f0ece4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* ── GRAIN OVERLAY ── */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.35;
+        }
+
+        /* ── TYPOGRAPHY ── */
+        .font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+        }
+
+        .nav-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            padding: 0 40px 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,0.6) 40%, rgba(10,10,10,0.2) 100%),
+                linear-gradient(to right, rgba(10,10,10,0.8) 0%, transparent 60%),
+                url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            filter: contrast(1.1) saturate(0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.4);
+            color: var(--gold);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px; height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .hero-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(5rem, 15vw, 14rem);
+            line-height: 0.85;
+            letter-spacing: 0.02em;
+            color: var(--light);
+            margin-bottom: 8px;
+        }
+
+        .hero-name span {
+            color: var(--gold);
+            display: block;
+        }
+
+        .hero-tagline {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: var(--gray);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            border-left: 2px solid var(--gold);
+            padding-left: 16px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: 900;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--light);
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 16px 32px;
+            border: 1px solid rgba(240, 236, 228, 0.3);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            background: var(--dark-2);
+            border-top: 1px solid rgba(201, 168, 76, 0.2);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+            padding: 32px 40px;
+        }
+
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 16px;
+            border-right: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gray);
+        }
+
+        /* ── SECTIONS ── */
+        section { padding: 100px 40px; }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            max-width: 60px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.5;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 0.9;
+            margin-bottom: 24px;
+            color: var(--light);
+        }
+
+        /* ── BIO ── */
+        .bio-section {
+            background: var(--dark);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .bio-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #aaa;
+            font-weight: 300;
+        }
+
+        .bio-text p { margin-bottom: 20px; }
+
+        .bio-text strong {
+            color: var(--light);
+            font-weight: 700;
+        }
+
+        .bio-quote {
+            border-left: 3px solid var(--gold);
+            padding: 24px 32px;
+            background: rgba(201, 168, 76, 0.05);
+            margin: 32px 0;
+        }
+
+        .bio-quote p {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.3;
+            color: var(--light);
+            letter-spacing: 0.03em;
+            margin: 0;
+        }
+
+        .bio-quote cite {
+            display: block;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-top: 12px;
+            font-style: normal;
+        }
+
+        .bio-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .bio-image-frame {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .bio-image-frame img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            filter: contrast(1.15) saturate(0.2) brightness(0.9);
+            display: block;
+        }
+
+        .bio-image-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 50%);
+        }
+
+        .bio-image-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+        }
+
+        .influences-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .influence-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 16px;
+            background: var(--dark-2);
+            border-left: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .influence-item:hover {
+            border-left-color: var(--gold);
+            background: var(--dark-3);
+        }
+
+        .influence-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(201, 168, 76, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .influence-name {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--light);
+        }
+
+        .influence-desc {
+            font-size: 0.72rem;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+
+        /* ── CATALOG ── */
+        .catalog-section {
+            background: var(--dark-2);
+        }
+
+        .tracks-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .track-item {
+            display: grid;
+            grid-template-columns: 48px 1fr auto auto;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 24px;
+            background: var(--dark-3);
+            border-left: 2px solid transparent;
+            transition: all 0.3s;
+            cursor: default;
+        }
+
+        .track-item:hover {
+            background: rgba(201, 168, 76, 0.05);
+            border-left-color: var(--gold);
+        }
+
+        .track-item.top-track {
+            border-left-color: var(--gold);
+            background: rgba(201, 168, 76, 0.08);
+        }
+
+        .track-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        .track-item.top-track .track-num { color: var(--gold); }
+
+        .track-info {}
+
+        .track-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--light);
+            margin-bottom: 4px;
+        }
+
+        .track-feat {
+            font-size: 0.72rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .track-streams {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            color: var(--light);
+            text-align: right;
+        }
+
+        .track-item.top-track .track-streams { color: var(--gold); }
+
+        .track-streams-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: var(--gray);
+            text-transform: uppercase;
+            text-align: right;
+        }
+
+        .track-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            font-size: 0.55rem;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        /* ── THEMES ── */
+        .themes-section {
+            background: var(--dark);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+        }
+
+        .theme-card {
+            background: var(--dark-2);
+            padding: 40px;
+            border-top: 2px solid transparent;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .theme-card:hover::before { transform: scaleX(1); }
+
+        .theme-card:hover { background: var(--dark-3); }
+
+        .theme-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: rgba(201, 168, 76, 0.1);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .theme-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.6rem;
+            color: var(--light);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .theme-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* ── VISUAL WORLD ── */
+        .visual-section {
+            background: var(--dark-2);
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .visual-card {
+            position: relative;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background: var(--dark-3);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(1.2) saturate(0.15) brightness(0.7);
+            transition: all 0.6s;
+        }
+
+        .visual-card:hover img {
+            filter: contrast(1.1) saturate(0.3) brightness(0.85);
+            transform: scale(1.05);
+        }
+
+        .visual-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+        }
+
+        .visual-card-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.08em;
+            color: var(--light);
+            margin-bottom: 4px;
+        }
+
+        .visual-card-sub {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* ── AUDIENCE ── */
+        .audience-section {
+            background: var(--dark);
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .audience-card {
+            background: var(--dark-2);
+            padding: 40px;
+            position: relative;
+        }
+
+        .audience-card::after {
+            content: attr(data-num);
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5rem;
+            color: rgba(201, 168, 76, 0.06);
+            line-height: 1;
+        }
+
+        .audience-tag {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            color: var(--gold);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            margin-bottom: 20px;
+        }
+
+        .audience-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: var(--light);
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .audience-age {
+            font-size: 0.72rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .audience-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .audience-action {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            font-size: 0.75rem;
+            color: var(--light);
+            font-weight: 500;
+        }
+
+        .audience-action::before {
+            content: '→ ';
+            color: var(--gold);
+        }
+
+        /* ── BOTTOM LINE ── */
+        .bottomline-section {
+            background: var(--dark-2);
+        }
+
+        .bottomline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .bl-card {
+            background: var(--dark-3);
+            padding: 40px;
+        }
+
+        .bl-card.featured {
+            background: var(--gold);
+            color: var(--dark);
+        }
+
+        .bl-label {
+            font-size: 0.6rem;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .bl-card.featured .bl-label { color: rgba(10,10,10,0.6); }
+
+        .bl-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--light);
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+
+        .bl-card.featured .bl-title { color: var(--dark); }
+
+        .bl-text {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .bl-card.featured .bl-text { color: rgba(10,10,10,0.75); }
+
+        /* ── GROWTH ── */
+        .growth-section {
+            background: var(--dark);
+        }
+
+        .growth-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-top: 60px;
+        }
+
+        .growth-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 0;
+            background: var(--dark-2);
+        }
+
+        .growth-priority {
+            background: var(--dark-3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--gray);
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            padding: 20px 0;
+        }
+
+        .growth-priority.urgent { color: var(--gold); background: rgba(201, 168, 76, 0.08); }
+
+        .growth-content {
+            padding: 32px 40px;
+        }
+
+        .growth-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            color: var(--light);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .growth-desc {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .growth-action {
+            margin-top: 12px;
+            font-size: 0.78rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 60px 40px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .footer-logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .footer-tagline {
+            font-size: 0.75rem;
+            color: var(--gray);
+            letter-spacing: 0.1em;
+            line-height: 1.6;
+        }
+
+        .footer-col-title {
+            font-size: 0.6rem;
+            font-weight: 900;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-links a::before {
+            content: '→';
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-2);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: var(--gray);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 10px 16px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.7rem;
+            color: rgba(136,136,136,0.5);
+            letter-spacing: 0.1em;
+        }
+
+        .footer-euro {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            color: rgba(201, 168, 76, 0.3);
+            letter-spacing: 0.2em;
+        }
+
+        /* ── SCROLL REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            nav { padding: 16px 20px; }
+            .nav-links { display: none; }
+            section { padding: 60px 20px; }
+            .hero { padding: 0 20px 60px; }
+            .stats-bar { padding: 24px 20px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+            .bio-sidebar { position: static; }
+            .themes-grid { grid-template-columns: 1fr; }
+            .visual-grid { grid-template-columns: 1fr; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .bottomline-grid { grid-template-columns: 1fr; }
+            .growth-item { grid-template-columns: 1fr; }
+            .growth-priority { writing-mode: horizontal-tb; padding: 12px 20px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">GREEN MONEY</a>
+        <ul class="nav-links">
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#audience">Audience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Rap / Hip-Hop / Paris — Album MP3 disponible</div>
+            <h1 class="hero-name">
+                GREEN<span>MONEY</span>
+            </h1>
+            <p class="hero-tagline">Brut. Cinématographique. Sans filtre. — Paris bitume, énergie US.</p>
+            <div class="hero-ctas">
+                <a href="https://open.spotify.com/artist/" target="_blank" class="btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Écouter sur Spotify
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">431K</div>
+                <div class="stat-label">Streams — Wemby (Top Track)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10.9K</div>
+                <div class="stat-label">Auditeurs Mensuels Spotify</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Projets sortis en 2025</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Indépendant — Aucun Label</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BIO -->
+    <section id="bio" class="bio-section">
+        <div class="section-inner">
+            <div class="bio-grid">
+                <div class="bio-left reveal">
+                    <div class="section-label">Artist Bio</div>
+                    <h2 class="section-title">La Rue Parle.<br>Pas Un Personnage.</h2>
+
+                    <div class="bio-text">
+                        <p>Je suis <strong>Green Money</strong> — un artiste profondément ancré dans la pure culture hip-hop. Mon ADN musical fait naturellement le pont entre l'authenticité du rap français et l'énergie du rap américain.</p>
+                        <p>Mon style est direct, brut, très imprégné par le <strong>street lifestyle</strong> et l'esthétique US. Ce qui drive ma musique, c'est la vérité du bitume : raconter le hustle, l'ambition, les trahisons — mais surtout la détermination pour s'en sortir.</p>
+                    </div>
+
+                    <div class="bio-quote">
+                        <p>"Je ne suis pas dans la fiction. Ma musique est le reflet direct de mon vécu."</p>
+                        <cite>— Green Money</cite>
+                    </div>
+
+                    <div class="bio-text">
+                        <p>Ma direction artistique s'inspire de <strong>Freddie Gibbs</strong> : une approche où la réalité crue de la rue rencontre une exigence musicale forte — un univers à la fois sombre, authentique et presque cinématographique.</p>
+                        <p>Mon but en studio est simple : retranscrire cette <strong>faim de réussir</strong> avec une esthétique pointue pour que mon public s'y reconnaisse. Productions lourdes, grain vintage, soul sombre, textes sans filtre.</p>
+                    </div>
+                </div>
+
+                <div class="bio-sidebar reveal">
+                    <div class="bio-image-frame">
+                        <img src="https://images.unsplash.com/photo-1571609860754-b3a2e8e5e5e5?auto=format&fit=crop&w=600&q=80" 
+                             onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=600&q=80'"
+                             alt="Green Money">
+                        <div class="bio-image-label">GREEN MONEY — PARIS</div>
+                    </div>
+
+                    <div class="section-label" style="margin-bottom: 20px;">Influences</div>
+                    <div class="influences-list">
+                        <div class="influence-item">
+                            <div class="influence-icon">🎯</div>
+                            <div>
+                                <div class="influence-name">Freddie Gibbs</div>
+                                <div class="influence-desc">Le modèle direct — brut/premium, grain vintage, soul sombre</div>
+                            </div>
+                        </div>
+                        <div class="influence-item">
+                            <div class="influence-icon">🔥</div>
+                            <div>
+                                <div class="influence-name">2Pac</div>
+                                <div class="influence-desc">Le rap comme témoignage direct — la rue qui parle</div>
+                            </div>
+                        </div>
+                        <div class="influence-item">
+                            <div class="influence-icon">🌑</div>
+                            <div>
+                                <div class="influence-name">Mobb Deep</div>
+                                <div class="influence-desc">Esthétique sombre, atmosphérique, cinématographique</div>
+                            </div>
+                        </div>
+                        <div class="influence-item">
+                            <div class="influence-icon">⚡</div>
+                            <div>
+                                <div class="influence-name">DMX</div>
+                                <div class="influence-desc">Énergie brute, autorité vocale, faim viscérale</div>
+                            </div>
+                        </div>
+                        <div class="influence-item">
+                            <div class="influence-icon">🇫🇷</div>
+                            <div>
+                                <div class="influence-name">Despo Rutti / Intouchable</div>
+                                <div class="influence-desc">Rap français underground — lourd, organique, sans compromis</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section id="catalog" class="catalog-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Discographie</div>
+            <h2 class="section-title reveal">Le Catalog<br>Tient La Route.</h2>
+            <p class="reveal" style="color: var(--gray); font-size: 0.9rem; margin-bottom: 48px; max-width: 600px; line-height: 1.7;">
+                Un album (MP3, 2025), deux EPs (OPÉRATION PHANTOM I & II, THE SIX Chapitre 2), plus un single — tout sorti en 2025. Charbonneur pur, aucun label, cadence soutenue.
+            </p>
+
+            <div class="tracks-grid reveal">
+                <div class="track-item top-track">
+                    <div class="track-num">01</div>
+                    <div class="track-info">
+                        <div class="track-title">Wemby <span class="track-badge">Top Track</span></div>
+                        <div class="track-feat">feat. La Fouine</div>
+                    </div>
+                    <div>
+                        <div class="track-streams">431K</div>
+                        <div class="track-streams-label">streams</div>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <div class="track-num">02</div>
+                    <div class="track-info">
+                        <div class="track-title">Mon Hood</div>
+                    </div>
+                    <div>
+                        <div class="track-streams">263K</div>
+                        <div class="track-streams-label">streams</div>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <div class="track-num">03</div>
+                    <div class="track-info">
+                        <div class="track-title">Je meurs les yeux ouverts</div>
+                    </div>
+                    <div>
+                        <div class="track-streams">193K</div>
+                        <div class="track-streams-label">streams</div>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <div class="track-num">04</div>
+                    <div class="track-info">
+                        <div class="track-title">Quand je tombe</div>
+                    </div>
+                    <div>
+                        <div class="track-streams">116K</div>
+                        <div class="track-streams-label">streams</div>
+                    </div>
+                </div>
+                <div class="track-item">
+                    <div class="track-num">05</div>
+                    <div class="track-info">
+                        <div class="track-title">Don Corleone</div>
+                    </div>
+                    <div>
+                        <div class="track-streams">100K+</div>
+                        <div class="track-streams-label">streams</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 48px; padding: 32px; background: rgba(201,168,76,0.06); border-left: 2px solid var(--gold);">
+                <p style="font-size: 0.8rem; color: var(--gray); line-height: 1.7;">
+                    <strong style="color: var(--gold);">Hard truth :</strong> 'Wemby' est une collab avec La Fouine — le prochain album doit prouver que les chiffres tiennent sans featuring de poids. 
+                    <strong style="color: var(--light);">L'opportunité :</strong> ces streams sont du capital réel à présenter aux curators et aux labels pour le push de novembre.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE THEMES -->
+    <section id="themes" class="themes-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Core Themes</div>
+            <h2 class="section-title reveal">Ce Qui Drive<br>La Musique.</h2>
+
+            <div class="themes-grid reveal" style="margin-top: 60px;">
+                <div class="theme-card">
+                    <div class="theme-number">01</div>
+                    <div class="theme-title">Vérité du Bitume, Sans Filtre</div>
+                    <div class="theme-desc">Green Money ancre chaque track dans le vécu réel — hustle, trahisons, survie — avec une conviction testimoniale qui refuse la fiction. Reflétée dans des titres comme 'Je meurs les yeux ouverts' (193K) et 'Mon Hood' (263K).</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-number">02</div>
+                    <div class="theme-title">Pont Franco-Américain, Esthétique Cinématographique</div>
+                    <div class="theme-desc">L'ADN musical fusionne la brutalité du rap français underground avec l'exigence premium à la Freddie Gibbs — productions lourdes, grain vintage, soul sombre, textes sans filtre.</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-number">03</div>
+                    <div class="theme-title">Faim de Réussir, Indépendant et Actif</div>
+                    <div class="theme-desc">10 963 auditeurs mensuels, un album, deux EPs et un single sortis la même année. Green Money tourne en mode charbonneur pur — aucun label, cadence de sorties soutenue.</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-number">04</div>
+                    <div class="theme-title">Silence Stratégique — Scarcité Contrôlée</div>
+                    <div class="theme-desc">Un compte dormant avant un drop majeur peut être une crise ou un reset calculé. Avec la cadence de sorties 2025, ça ressemble à un relaunch délibéré. La scarcité construit l'anticipation si elle est activée correctement.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISUAL WORLD -->
+    <section class="visual-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Visual World</div>
+            <h2 class="section-title reveal">Dark Cinematic.<br>Street Premium.</h2>
+            <p class="reveal" style="color: var(--gray); font-size: 0.9rem; max-width: 600px; line-height: 1.7; margin-bottom: 0;">
+                L'identité visuelle est construite autour du blueprint Freddie Gibbs : fort contraste, basse lumière, grain. Des coins de rue filmés comme des stills de cinéma. Paris bitume shooté avec un poids cinématographique américain.
+            </p>
+
+            <div class="visual-grid reveal">
+                <div class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=600&q=80" alt="Dark Cinematic">
+                    <div class="visual-card-overlay">
+                        <div class="visual-card-title">Dark Cinematic Framing</div>
+                        <div class="visual-card-sub">Heavy contrast — Low light — Grain</div>
+                    </div>
+                </div>
+                <div class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Street Premium">
+                    <div class="visual-card-overlay">
+                        <div class="visual-card-title">Street Premium</div>
+                        <div class="visual-card-sub">Brut meets elevated — Délibéré, pas gratuit</div>
+                    </div>
+                </div>
+                <div class="visual-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" alt="Franco-American">
+                    <div class="visual-card-overlay">
+                        <div class="visual-card-title">Franco-American Hybrid</div>
+                        <div class="visual-card-sub">Paris bitume — US cinematic weight</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE -->
+    <section id="audience" class="audience-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Fan Archetypes</div>
+            <h2 class="section-title reveal">Qui Écoute.<br>Qui Répond.</h2>
+
+            <div class="audience-grid reveal">
+                <div class="audience-card" data-num="01">
+                    <div class="audience-tag">Noyau Dur</div>
+                    <div class="audience-title">Vétérans du Rap Français Underground</div>
+                    <div class="audience-age">25–40 ans</div>
+                    <div class="audience-desc">Fans qui ont grandi avec Intouchable, Ol Kainry, Despo Rutti. Ils reconnaissent immédiatement l'ADN dans les productions de Green Money : lourd, organique, sans compromis. Ce public existe déjà — l'algorithme Spotify le confirme.</div>
+                    <div class="audience-action">Cibler les playlists rap classique FR et activer des features dans ce cercle.</div>
+                </div>
+                <div class="audience-card" data-num="02">
+                    <div class="audience-tag">Pont Transatlantique</div>
+                    <div class="audience-title">Auditeurs US-Influenced</div>
+                    <div class="audience-age">20–35 ans</div>
+                    <div class="audience-desc">Fans de Freddie Gibbs, Mobb Deep, DMX qui cherchent activement un équivalent français avec la même exigence cinématographique. 'Wemby' à 431K montre que ce public répond quand le son est premium.</div>
+                    <div class="audience-action">Pitcher les playlists 'rap sombre', 'rap cinématographique', 'rap FR x US' sur Spotify.</div>
+                </div>
+                <div class="audience-card" data-num="03">
+                    <div class="audience-tag">Local & Diaspora</div>
+                    <div class="audience-title">La Rue Parisienne — Quartiers</div>
+                    <div class="audience-age">18–30 ans</div>
+                    <div class="audience-desc">Jeunes des quartiers parisiens et de la diaspora africaine/maghrébine qui vivent les thèmes de l'album : hustle, loyauté, survie, ascension. Ils ne cherchent pas de fiction — ils veulent du vécu.</div>
+                    <div class="audience-action">Réactiver Instagram avec des Reels courts — snippets, studio, rue — avant le drop.</div>
+                </div>
+                <div class="audience-card" data-num="04">
+                    <div class="audience-tag">Anti-Mainstream</div>
+                    <div class="audience-title">Chasseurs de Rap Authentique</div>
+                    <div class="audience-age">20–35 ans</div>
+                    <div class="audience-desc">Auditeurs qui rejettent activement le rap commercial et cherchent des artistes indépendants avec une vraie identité. Ils valorisent l'authenticité sur les chiffres. La collab La Fouine prouve que ce public amplifie quand il trouve quelque chose de réel.</div>
+                    <div class="audience-action">Soumettre l'album aux blogs rap FR indépendants et aux curators Spotify underground.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="bottomline-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Bottom Line</div>
+            <h2 class="section-title reveal">Ce Qui Se Passe.<br>Ce Qu'il Faut Faire.</h2>
+
+            <div class="bottomline-grid reveal">
+                <div class="bl-card">
+                    <div class="bl-label">Situation Actuelle</div>
+                    <div class="bl-title">Le Son Est Là. La Visibilité Non.</div>
+                    <div class="bl-text">Green Money tourne à 10 963 auditeurs mensuels, un catalog qui prouve le vécu — 431K streams sur 'Wemby', sept autres titres au-dessus de 100K — et un album qui arrive. L'identité artistique est définie : brut, cinématographique, Freddie Gibbs à la française. Mais le profil Instagram est mort : 5 284 followers, zéro post, une bio réduite à '€'.</div>
+                </div>
+                <div class="bl-card featured">
+                    <div class="bl-label">Biggest Opportunity</div>
+                    <div class="bl-title">5 284 Followers Dormants = Rampe de Lancement.</div>
+                    <div class="bl-text">Réactiver le compte maintenant — snippets, visuals sombres, rue filmée comme du cinéma — peut convertir cette base en auditeurs actifs avant le drop et déclencher l'algorithme au moment exact où l'album sort. C'est la différence entre un drop dans le vide et un drop avec du momentum derrière.</div>
+                </div>
+                <div class="bl-card">
+                    <div class="bl-label">Most Urgent Fix</div>
+                    <div class="bl-title">Instagram Réactivé. Aujourd'hui. Pas Demain.</div>
+                    <div class="bl-text">Zéro post, zéro lien Spotify, zéro signal genre ou ville : un visiteur qui découvre Green Money en ce moment repart les mains vides. Réécrire la bio, ajouter le lien pre-save, poster le premier Reel cette semaine. Chaque jour de silence est du momentum brûlé.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROWTH OPPORTUNITIES -->
+    <section class="growth-section">
+        <div class="section-inner">
+            <div class="section-label reveal">Growth Opportunities</div>
+            <h2 class="section-title reveal">Les Moves<br>À Faire Maintenant.</h2>
+
+            <div class="growth-list reveal">
+                <div class="growth-item">
+                    <div class="growth-priority urgent">URGENT</div>
+                    <div class="growth-content">
+                        <div class="growth-title">Réactiver Instagram — Minimum 3 Reels / Semaine</div>
+                        <div class="growth-desc">5 284 followers, zéro post. Le compte existe, l'audience est là — mais elle reçoit rien. Avec un album qui arrive, chaque semaine sans post est une semaine de momentum perdu. Snippets studio, visuals sombres, lifestyle brut.</div>
+                        <div class="growth-action">Poster le premier Reel cette semaine. Pas la semaine prochaine.</div>
+                    </div>
+                </div>
+                <div class="growth-item">
+                    <div class="growth-priority urgent">URGENT</div>
+                    <div class="growth-content">
+                        <div class="growth-title">Bio Instagram : Zéro Signal = Zéro Funnel</div>
+                        <div class="growth-desc">Un seul signe euro (€) dans la bio — pas de nom, pas de genre, pas de lien Spotify, pas de pre-save. Un visiteur qui découvre le profil repart les mains vides. Réécrire la bio avec le nom, 'rap / hip-hop / Paris', et un lien direct vers Spotify ou une landing page pre-save.</div>
+                        <div class="growth-action">10 minutes de travail. Impact immédiat.</div>
+                    </div>
+                </div>
+                <div class="growth-item">
+                    <div class="growth-priority">IMPORTANT</div>
+                    <div class="growth-content">
+                        <div class="growth-title">Zéro Placement Playlist — Catalogue Invisible</div>
+                        <div class="growth-desc">Aucun placement éditorial tracké. Pourtant 'Wemby' tourne à 431K — la preuve que le son peut percer. Soumettre les tracks les plus fortes via Spotify for Artists avant la sortie album, et cibler les playlists underground french rap.</div>
+                        <div class="growth-action">Soumettre maintenant pour ouvrir le robinet de découverte algorithmique.</div>
+                    </div>
+                </div>
+                <div class="growth-item">
+                    <div class="growth-priority">IMPORTANT</div>
+                    <div class="growth-content">
+                        <div class="growth-title">Multiplier les Collaborations Stratégiques</div>
+                        <div class="growth-desc">'Wemby' avec La Fouine représente le pic absolu du catalogue à 431K — soit 64% de plus que le deuxième titre. C'est un signal : les features ouvrent des portes. Identifier deux ou trois features dans l'écosystème underground français (Jarod, Sultan, Despo Rutti).</div>
+                        <div class="growth-action">Dupliquer l'effet La Fouine sur le nouvel album.</div>
+                    </div>
+                </div>
+                <div class="growth-item">
+                    <div class="growth-priority">À FAIRE</div>
+                    <div class="growth-content">
+                        <div class="growth-title">Spotify Non Vérifié — Profil Sans Armure</div>
+                        <div class="growth-desc">Le compte Spotify n'est pas vérifié et aucune bio n'est renseignée. Avec un album qui sort, c'est la première chose qu'un curateur ou un journaliste va voir. Réclamer la vérification via Spotify for Artists, uploader la bio, ajouter un Artist Pick.</div>
+                        <div class="growth-action">La différence entre un artiste qui se présente et un artiste découvert par hasard.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING -->
+    <section id="contact" style="background: var(--dark-2); padding: 100px 40px;">
+        <div class="section-inner">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div class="reveal">
+                    <div class="section-label">Booking & Management</div>
+                    <h2 class="section-title">On Parle<br>Business.</h2>
+                    <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.8; margin-bottom: 32px;">
+                        Features, placements, collaborations, interviews — toutes les demandes passent par le management. Réponse sous 48h.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <a href="https://www.instagram.com/" target="_blank" class="btn-primary" style="width: fit-content;">
+                            Instagram — @greenmoney
+                        </a>
+                        <a href="https://open.spotify.com/artist/" target="_blank" class="btn-secondary" style="width: fit-content;">
+                            Spotify — Green Money
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div style="background: var(--dark-3); padding: 48px; border-left: 2px solid var(--gold);">
+                        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 24px;">PROFIL EN CHIFFRES</div>
+                        <div style="display: flex; flex-direction: column; gap: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;">Auditeurs Mensuels</span>
+                                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--light);">10 963</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;">Followers Spotify</span>
+                                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--light);">3 627</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;">Followers Instagram</span>
+                                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--light);">5 284</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                <span style="font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;">Top Stream (Wemby)</span>
+                                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--gold);">431K</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;">Projets 2025</span>
+                                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--light);">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo">GREEN MONEY</div>
+                <div class="footer-tagline">
+                    Rap / Hip-Hop / Paris<br>
+                    Brut. Cinématographique. Sans filtre.<br>
+                    Album MP3 — 2025
+                </div>
+            </div>
+            <div>
+                <div class="footer-col-title">Navigation</div>
+                <ul class="footer-links">
+                    <li><a href="#bio">Artist Bio</a></li>
+                    <li><a href="#catalog">Discographie</a></li>
+                    <li><a href="#themes">Core Themes</a></li>
+                    <li><a href="#audience">Fan Archetypes</a></li>
+                    <li><a href="#contact">Booking</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-col-title">Réseaux</div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/" target="_blank" class="social-btn">Instagram</a>
+                    <a href="https://open.spotify.com/artist/" target="_blank" class="social-btn">Spotify</a>
+                    <a href="https://www.youtube.com/" target="_blank" class="social-btn">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-copy">© 2025 GREEN MONEY — Tous droits réservés — Indépendant</div>
+            <div class="footer-euro">€</div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth nav highlight
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = 'var(--gold)';
+                }
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounter(el, target, suffix = '') {
+            const duration = 2000;
+            const start = performance.now();
+            const isDecimal = target.toString().includes('.');
+            
+            function update(time) {
+                const elapsed = time - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * parseFloat(target));
+                el.textContent = current.toLocaleString('fr-FR') + suffix;
+                if (progress < 1) requestAnimationFrame(update);
+                else el.textContent = parseFloat(target).toLocaleString('fr-FR') + suffix;
+            }
+            requestAnimationFrame(update);
+        }
+
+        // Trigger counters when stats bar is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    const targets = ['431', '10.9', '5', '100'];
+                    const suffixes = ['K', 'K', '', '%'];
+                    statNumbers.forEach((el, i) => {
+                        if (targets[i]) animateCounter(el, targets[i], suffixes[i]);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsBar = document.querySelector('.stats-bar');
+        if (statsBar) statsObserver.observe(statsBar);
+    </script>
+</body>
+</html>
