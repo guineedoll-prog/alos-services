@@ -1,0 +1,11 @@
+{
+  "name": "neon-rift",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jeu d'action arcade Neon Rift",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  }
+}
